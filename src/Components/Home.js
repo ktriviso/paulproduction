@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-import Modal from './Partials/Modal'
-import Blog from './Partials/Blog'
-import Featured from './Partials/Featured'
+import Modal from './Modal'
+import FeaturedBlogPosts from './Partials/FeaturedBlogPosts'
 import Testimonial from './Partials/Testimonial'
 
 export default class Home extends Component {
@@ -31,16 +30,17 @@ export default class Home extends Component {
         if(this.state.launchModal) {
             modal = <Modal handleCloseModal={this.closeModal.bind(this)}/>
         }
-        var aboutData = this.props.data.about
-        console.log(this.props.data)
+        var aboutGrid = this.props.data.aboutGrid
+        var testimonials = this.props.data.testimonials
+        var blogPosts = this.props.data.blogPosts
+        var featuredBlogPosts = this.props.data.featuredBlogPosts
+        console.log(featuredBlogPosts)
+
         return(
             <div>
             {modal}
                 <header id="main-header">
                     <div className="row">
-                        <div className="logo">
-                            <a href="index.html">Kreo</a>
-                        </div>
 
                         <nav id="nav-wrap">
                             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
@@ -52,56 +52,48 @@ export default class Home extends Component {
 
                             <ul id="nav" className="nav">
                             <li><a className="smoothscroll" href="#hero">Home.</a></li>
-                            <li className="current"><a className="smoothscroll" href="#about">About.</a></li>
+                            <li><a className="smoothscroll" href="#about">About.</a></li>
                             <li><a className="smoothscroll" href="#testimonial-scroll">Testimonials.</a></li>
                             <li><a className="smoothscroll" href="#portfolio">Blog.</a></li>
-                            <li><a className="smoothscroll" href="#contact">Contact.</a></li>
+                            <li  className="current"><a className="smoothscroll" href="#contact">Contact.</a></li>
                             </ul>
                         </nav>
 
                         <ul className="header-social">
                             <li><a href="#"><i className="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i className="fa fa-youtube-play"></i></a></li>
+                            <li><a href="#"><i className="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </header>
 
-                <Featured />
+                <FeaturedBlogPosts featuredBlogPosts={featuredBlogPosts}/>
 
                 <section id="about">
                     <div className="row section-head">
                         <div className="twelve columns">
-                            <h1>Who Are We<span>.</span></h1>
+                            <h1>About Our Head Coach<span>.</span></h1>
                             <hr />
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                            <p>about paul</p>
                         </div>
                     </div>
 
-                    <div className="row mobile-no-padding">
-                        <div className="process bgrid-half tab-bgrid-whole group">
-                            <div className="bgrid">
-                                <h3>Our Process.</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-
+                    {aboutGrid.map(function(about){
+                        return (
+                            <div className="primary-content">
+                                <div className="row mobile-no-padding">
+                                    <div className="process bgrid-half tab-bgrid-whole group">
+                                        <div className="bgrid">
+                                            <h3>{about.fields.aboutTitle}</h3>
+                                            <p>{about.fields.aboutContent}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        )
+                    })}
 
-                            <div className="bgrid">
-                                <h3>Our Approach.</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                            </div>
-
-                            <div className="bgrid">
-                                <h3>Our Goal.</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                            </div>
-
-                            <div className="bgrid">
-                                <h3>Our Mission.</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                            </div>
-                        </div>
-                    </div>
 
 
                     <div className="row team section-head" id ='testimonial-scroll'>
@@ -111,7 +103,7 @@ export default class Home extends Component {
                         </div>
                     </div>
 
-                    <Testimonial />
+                    <Testimonial testimonials={testimonials}/>
 
                 </section>
 
@@ -128,17 +120,21 @@ export default class Home extends Component {
                     <div className="row items">
                         <div id="portfolio-wrapper" className="bgrid-fourth s-bgrid-third tab-bgrid-half">
                             <div className="bgrid folio-item" onClick={this.launchModal.bind(this)}>
-                                <div className="item-wrap">
-                                    <a href="#modal-01">
-                                        <img src="images/portfolio/underwater.jpg" alt="Underwater"/>
-                                        <div className="overlay"></div>
-                                        <div className="portfolio-item-meta">
-                                            <h5>Underwater</h5>
-                                            <p>Videography</p>
+                                    {blogPosts.map(function(blogPost){
+                                        return (
+                                            <div className="item-wrap">
+                                                <img src={blogPost.fields.blogImage.fields.file.url}/>
+                                                <Link to={'/modal/' + blogPost.sys.id}>
+                                                    <div className="overlay"></div>
+                                                    </Link>
+                                                <div className="portfolio-item-meta">
+                                                    <h5>{blogPost.fields.blogTitle}</h5>
+                                                    <p>{blogPost.fields.blogCategory}</p>
+                                                </div>
+                                                <div className="link-icon"><i className="fa fa-plus"></i></div>
                                             </div>
-                                        <div className="link-icon"><i className="fa fa-plus"></i></div>
-                                    </a>
-                                </div>
+                                        )
+                                    })}
                             </div>
                         </div>
                     </div>
@@ -166,7 +162,7 @@ export default class Home extends Component {
                                     <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject"  value="" />
                                 </div>
                                 <div>
-                                    <textarea name="contactMessage"  id="contactMessage" placeholder="message" rows="10" cols="50" required ></textarea>
+                                    <textarea name="contactMessage"  id="contactMessage" placeholder="Message" rows="10" cols="50" required ></textarea>
                                 </div>
                                 <div>
                                     <button className="submitform">Submit</button>
@@ -189,21 +185,35 @@ export default class Home extends Component {
                     </div>
 
                     <div className="six columns tab-whole right">
-                        <p className="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <h3>Contact Information:</h3>
+                        <p>Mobile: (570) 590 8251<br/>
+                        Email: paul@outbreakfitness.com <br/>
+                        </p>
 
-                        <h3 className="address">Come Visit</h3>
-
+                        <h3 className="address">Affiliated Gyms</h3>
                         <p>
-                        1600 Amphitheatre Parkway<br/>
-                        Mountain View, CA<br/>
-                        94043 US
+                        CrossFit Outbreak East Williamsburg<br/>
+                        208 Frost Street<br/>
+                        Brooklyn, Ny<br/>
+                        11211 US
+                        </p>
+                        <p>
+                        CrossFit Outbreak Williamsburg<br/>
+                        415 Wythe Avenue<br/>
+                        Brooklyn, Ny<br/>
+                        11249 US
+                        </p><p>
+                        CrossFit Outbreak Clinton Hill<br/>
+                        10 Grand Avenue<br/>
+                        Brooklyn, Ny<br/>
+                        11205 US
+                        </p><p>
+                        CrossFit Outbreak Bed Stuy<br/>
+                        492 Throop Avenue<br/>
+                        Brooklyn, Ny<br/>
+                        11221 US
                         </p>
 
-                        <h3>Contact Numbers:</h3>
-                        <p>Phone: (000) 555 1212<br/>
-                        Mobile: (000) 555 0100<br/>
-                        Fax: (000) 555 0101
-                        </p>
                     </div>
                     </div>
                 </section>
@@ -212,13 +222,10 @@ export default class Home extends Component {
                     <div className="row">
                         <div className="twelve columns content group">
                             <ul className="social-links">
-                                <li><a href="#"><i className="fa fa-facebook-square"></i></a></li>
+                                <li><a href="http://www.facebook.com/paul.roller.5"><i className="fa fa-facebook-square"></i></a></li>
                                 <li><a href="#"><i className="fa fa-twitter-square"></i></a></li>
-                                <li><a href="#"><i className="fa fa-google-plus-square"></i></a></li>
                                 <li><a href="#"><i className="fa fa-youtube-play"></i></a></li>
-                                <li><a href="#"><i className="fa fa-vimeo-square"></i></a></li>
-                                <li><a href="#"><i className="fa fa-flickr"></i></a></li>
-                                <li><a href="#"><i className="fa fa-skype"></i></a></li>
+                                <li><a href="#"><i className="fa fa-instagram"></i></a></li>
                             </ul>
                             <hr />
                             </div>

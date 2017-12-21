@@ -1,6 +1,6 @@
 /* =================================================================== */
 /*
-/*  KREO 1.0 | Vendor/Third Party CSS 
+/*  KREO 1.0 | Vendor/Third Party CSS
 /*  url: styleshout.com
 /*  10-12-2015
 /*
@@ -15,7 +15,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
  * Contributing author: Tyler Smith (@mbmufffin)
- * 
+ *
  */
 
 /* reset */
@@ -46,8 +46,8 @@
 }
 
 .flexslider .slides > li {
-	display: none;
-	-webkit-backface-visibility: hidden;
+	/*display: none;
+	-webkit-backface-visibility: hidden;*/
 }
 
 .flexslider .slides img {
@@ -82,7 +82,7 @@ html[xmlns] .flexslider .slides {
  * Magnific Popup - v1.0.0 - 2015-09-17
  * http://dimsemenov.com/plugins/magnific-popup/
  * Copyright (c) 2015 Dmitry Semenov;
- * 
+ *
  */
 
 .mfp-bg {

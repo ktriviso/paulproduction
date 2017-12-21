@@ -1004,7 +1004,7 @@ ul#nav li.current a:after {
 	/* for css animations */
 	filter: alpha(opacity=0);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	opacity: 0;
+	/*opacity: 0;*/
 	zoom: 1;
 }
 
@@ -1029,7 +1029,7 @@ ul#nav li.current a:after {
 	/* for css animations */
 	filter: alpha(opacity=0);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	opacity: 0;
+	/*opacity: 0;*/
 	zoom: 1;
 }
 
@@ -1307,7 +1307,7 @@ ul#nav li.current a:after {
 
 @media only screen and (max-width:1300px) {
 	#portfolio .row.items {
-		width: 100%;
+		/*width: 100%;*/
 		padding: 0;
 	}
 
@@ -1320,6 +1320,7 @@ ul#nav li.current a:after {
 /* portfolio content */
 #portfolio-wrapper {
 	margin-top: 36px;
+	margin-bottom: 36px;
 }
 
 #portfolio-wrapper:before,
@@ -2629,4 +2630,25 @@ footer .social-links li:first-child {
 
 .popup-modal .link-box a {
 	width: 100%;
+}
+
+#contact button.submitform {
+	background: #e64e04;
+	color: white;
+}
+
+#contact button.submitform:hover {
+	background: #fdc501;
+	color: black;
+}
+
+
+.flex-active-slide {
+	width: 100%;
+    float: left;
+    margin-right: -100%!important;
+    position: relative;
+    opacity: 1;
+    display: block;
+    z-index: 2;
 }

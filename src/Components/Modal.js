@@ -10,7 +10,7 @@ export default class Modal extends Component {
             <div id="modal-bg">
                 <div id="modal-01" className="popup-modal">
                     <div className="media">
-                        <img src="images/portfolio/modals/m-underwater.jpg" alt="Underwater" />
+                        <img src="images/portfolio/underwater.jpg" alt="Underwater"/>
                     </div>
 
                     <div className="description-box">

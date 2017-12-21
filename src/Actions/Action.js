@@ -12,12 +12,23 @@ export const getAppStore = (callback) => {
     cms.getEntries().then((response) => {
         console.log(response)
         const responseItems = response.items
-        const aboutData = _.find(responseItems, (item) => {
-            return item.sys.contentType.sys.id === 'about'
+        const aboutGrid = _.filter(responseItems, (item) => {
+            return item.sys.contentType.sys.id === 'aboutGrid'
+        })
+        const testimonials = _.filter(responseItems, (item) => {
+            return item.sys.contentType.sys.id === 'testimonials'
+        })
+        const blogPosts = _.filter(responseItems, (item) => {
+            return item.sys.contentType.sys.id === 'blogPosts'
+        })
+        const featuredBlogPosts = blogPosts.filter((post) => {
+            return post.fields.featuredBlogPost === true
         })
 
-        AppStore.data.about = aboutData
-        console.log(AppStore.data)
+        AppStore.data.featuredBlogPosts = featuredBlogPosts
+        AppStore.data.aboutGrid = aboutGrid
+        AppStore.data.testimonials = testimonials
+        AppStore.data.blogPosts = blogPosts
         AppStore.data.ready = true
 
         AppStore.emitChange()
