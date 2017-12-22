@@ -1,10 +1,17 @@
 import React, {Component} from 'react'
+import OwlCarousel from 'react-owl-carousel2';
 import {Link} from 'react-router-dom'
 
 export default class FeaturedBlogPosts extends Component {
     render() {
         const featuredBlogPosts = this.props.featuredBlogPosts
-        console.log(featuredBlogPosts)
+        const options = {
+            items: 1,
+            nav: false,
+            rewind: true,
+            autoplay: true,
+            autoplayHoverPause: true
+        }
         const post_html = featuredBlogPosts.map((post) => (
             <li className="flex-active-slide">
                 <div className="flex-caption">
@@ -18,9 +25,9 @@ export default class FeaturedBlogPosts extends Component {
                 <div className="row hero-content">
                     <div className="twelve columns hero-container">
                         <div id="hero-slider" className="flexslider">
-                            <ul className="slides">
+                            <OwlCarousel className="slides" options={options}>
                                 {post_html}
-                            </ul>
+                            </OwlCarousel>
                         </div>
                     </div>
                 </div>

@@ -2652,3 +2652,10 @@ footer .social-links li:first-child {
     display: block;
     z-index: 2;
 }
+
+#loader{
+	height: 100vh;
+	width: 100%;
+	margin: auto;
+	background: white ;
+}

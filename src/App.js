@@ -8,6 +8,7 @@ import AppDispatcher from './Dispatcher/Dispatcher.js'
 import {FeaturedBlogPosts} from './Components/Partials/FeaturedBlogPosts.js'
 import {Testimonial} from './Components/Partials/Testimonial.js'
 import {Modal} from './Components/Modal.js'
+import {Loader} from './Components/Partials/Loader.js'
 
 class App extends Component {
     constructor(props) {
@@ -31,9 +32,12 @@ class App extends Component {
     componentDidMount(){
         AppStore.addChangeListener(this._onChange.bind(this))
         var _this = this
-        _this.setState({
-            removeLoader: true
-        })
+        setTimeout(function(){
+            console.log('setTimeout is working')
+            _this.setState({
+                removeLoader: true
+            })
+        }, 1000)
     }
 
     componentWillUnmount(){
@@ -44,21 +48,23 @@ class App extends Component {
         this.setState(AppStore.data)
     }
 
-  render() {
+    render() {
       const data = AppStore.data
-      if(!data.ready){
+      if(!data.ready) {
           this.getStore()
-        return <div>loading</div>
-    } else {
-        return (
-            <BrowserRouter>
-                <div>
-                    {routes}
-                </div>
-            </BrowserRouter>
-        );
+          return <Loader/>
+      } else if(this.state.removeLoader){
+          return (
+              <BrowserRouter>
+                  <div>
+                      {routes}
+                  </div>
+              </BrowserRouter>
+          );
+      } else {
+          return <Loader />
+      }
     }
-  }
 }
 
 export default App;
