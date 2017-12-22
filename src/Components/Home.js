@@ -44,19 +44,12 @@ export default class Home extends Component {
                     <div className="row">
 
                         <nav id="nav-wrap">
-                            <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-                            <span className="menu-icon">Menu</span>
-                            </a>
-                            <a className="mobile-btn" href="#" title="Hide navigation">
-                            <span className="menu-icon">Menu</span>
-                            </a>
-
                             <ul id="nav" className="nav">
-                            <li className="current"><a className="smoothscroll" href="#hero">Home.</a></li>
-                            <li><a className="smoothscroll" href="#about">About.</a></li>
-                            <li><a className="smoothscroll" href="#testimonial-scroll">Testimonials.</a></li>
-                            <li><a className="smoothscroll" href="#portfolio">Blog.</a></li>
-                            <li><a className="smoothscroll" href="#contact">Contact.</a></li>
+                                <li className="current"><a className="smoothscroll" href="#hero">Home.</a></li>
+                                <li><a className="smoothscroll" href="#about">About.</a></li>
+                                <li><a className="smoothscroll" href="#testimonial-scroll">Testimonials.</a></li>
+                                <li><a className="smoothscroll" href="#portfolio">Blog.</a></li>
+                                <li><a className="smoothscroll" href="#contact">Contact.</a></li>
                             </ul>
                         </nav>
 
@@ -76,7 +69,7 @@ export default class Home extends Component {
                         <div className="twelve columns">
                             <h1>About Our Head Coach<span>.</span></h1>
                             <hr />
-                            <p>about paul</p>
+                            <p>Paul has an obsessive passion for learning the latest techniques in strength and conditioning, and using them to help others achieve their goals. Paul bases his knowledge on scientifically researched and well-tested protocols. He currently spends his time coaching at CrossFit Outbreak in Brooklyn, New York, coaching classes and designing training programs for general clients and competitive athletes alike. </p>
                         </div>
                     </div>
 
@@ -109,9 +102,9 @@ export default class Home extends Component {
                 <section id="portfolio">
                     <div className="row section-head">
                         <div className="twelve columns">
-                            <h1>Our Latest Blog Posts<span>.</span></h1>
+                            <h1>Our Blog Posts<span>.</span></h1>
                             <hr />
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                            <p>So you made the leap of signing up for a gym membership. You know you want to become more fit, but you may not know exactly what your goals are or what classes to take to achieve those goals. Our blog will introduce you to a litany of educational tips and tricks, from various forms of exercise to what kind of adaptations will stimulate in your body. We aim to create awareness around fitness and the advantages of the individualized approach. Visit our blog weekly for our latest and greatest posts.
                             </p>
                         </div>
                     </div>
@@ -197,22 +190,6 @@ export default class Home extends Component {
                         208 Frost Street<br/>
                         Brooklyn, Ny<br/>
                         11211 US
-                        </p>
-                        <p>
-                        CrossFit Outbreak Williamsburg<br/>
-                        415 Wythe Avenue<br/>
-                        Brooklyn, Ny<br/>
-                        11249 US
-                        </p><p>
-                        CrossFit Outbreak Clinton Hill<br/>
-                        10 Grand Avenue<br/>
-                        Brooklyn, Ny<br/>
-                        11205 US
-                        </p><p>
-                        CrossFit Outbreak Bed Stuy<br/>
-                        492 Throop Avenue<br/>
-                        Brooklyn, Ny<br/>
-                        11221 US
                         </p>
 
                     </div>
