@@ -34,6 +34,7 @@ export default class Home extends Component {
         var testimonials = this.props.data.testimonials
         var blogPosts = this.props.data.blogPosts
         var featuredBlogPosts = this.props.data.featuredBlogPosts
+        var _this = this
         console.log(featuredBlogPosts)
 
         return(
@@ -79,20 +80,18 @@ export default class Home extends Component {
                         </div>
                     </div>
 
-                    {aboutGrid.map(function(about){
-                        return (
-                            <div className="primary-content">
-                                <div className="row mobile-no-padding">
-                                    <div className="process bgrid-half tab-bgrid-whole group">
-                                        <div className="bgrid">
-                                            <h3>{about.fields.aboutTitle}</h3>
-                                            <p>{about.fields.aboutContent}</p>
-                                        </div>
+                    <div className="row mobile-no-padding">
+                        <div id="about-container"className="process bgrid-half tab-bgrid-whole group">
+                            {aboutGrid.map(function(about){
+                                return (
+                                    <div className="bgrid">
+                                        <h3>{about.fields.aboutTitle}</h3>
+                                        <p>{about.fields.aboutContent}</p>
                                     </div>
-                                </div>
-                            </div>
-                        )
-                    })}
+                                )
+                            })}
+                        </div>
+                    </div>
 
 
 
@@ -117,11 +116,12 @@ export default class Home extends Component {
                         </div>
                     </div>
 
-                    <div className="row items">
+                    <div className="row items mobile-no-padding">
                         <div id="portfolio-wrapper" className="bgrid-fourth s-bgrid-third tab-bgrid-half">
-                            <div className="bgrid folio-item" onClick={this.launchModal.bind(this)}>
                                     {blogPosts.map(function(blogPost){
+
                                         return (
+                                            <div className="bgrid folio-item" onClick={_this.launchModal.bind(_this)}>
                                             <div className="item-wrap">
                                                 <img src={blogPost.fields.blogImage.fields.file.url}/>
                                                 <Link to={'/modal/' + blogPost.sys.id}>
@@ -133,9 +133,10 @@ export default class Home extends Component {
                                                 </div>
                                                 <div className="link-icon"><i className="fa fa-plus"></i></div>
                                             </div>
+                                            </div>
                                         )
                                     })}
-                            </div>
+
                         </div>
                     </div>
                 </section>

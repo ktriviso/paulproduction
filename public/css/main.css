@@ -1348,12 +1348,23 @@ ul#nav li.current a:after {
 
 #portfolio-wrapper .bgrid {
 	padding: 0;
+	/*display: flex!important;
+	width: 100%;*/
+}
+#portfolio-wrapper img {
+	/*padding: 0;*/
+	/*display: flex!important;
+	max-height: 280px;
+	padding-left: 20px;
+	justify-content: space-around;
+	flex-flow: row wrap;*/
 }
 
 .folio-item .item-wrap {
 	background: #111417;
 	overflow: hidden;
 	position: relative;
+
 }
 
 .folio-item .item-wrap a {
@@ -1407,11 +1418,13 @@ ul#nav li.current a:after {
 
 .folio-item .item-wrap img {
 	vertical-align: bottom;
+	min-height: 225.594px;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	-webkit-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
+	padding: 10px;
 }
 
 .folio-item .portfolio-item-meta {
@@ -1480,6 +1493,15 @@ ul#nav li.current a:after {
 
 	.folio-item .portfolio-item-meta p {
 		font: 13px/18px "raleway-semibold", sans-serif;
+	}
+	#portfolio-wrapper .bgrid {
+		display: normal;
+		width: 100%;
+	}
+
+	#portfolio-wrapper img {
+		padding: 30px;
+		padding-bottom: 0px;
 	}
 
 }
