@@ -10,7 +10,8 @@ export default class FeaturedBlogPosts extends Component {
             nav: false,
             rewind: true,
             autoplay: true,
-            autoplayHoverPause: true
+            mouseDrag: false,
+            smartSpeed: 400
         }
         const post_html = featuredBlogPosts.map((post) => (
             <li className="flex-active-slide">

@@ -369,7 +369,7 @@ img.pull-left {
 #loader {
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 40%;
 	width: 50px;
 	height: 50px;
 	margin-left: -25px;
@@ -377,6 +377,19 @@ img.pull-left {
 	background-color: #fdc501;
 	-webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
 	animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+#side-loader{
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	height: 50px;
+	margin-left: -23px;
+	margin-top: -21px;
+	font-size: 2em;
+	letter-spacing: 2px;
+	-webkit-animation: 1.2s infinite ease-in-out;
+	animation: 1.2s infinite ease-in-out;
 }
 
 @-webkit-keyframes sk-rotateplane {
@@ -2653,9 +2666,11 @@ footer .social-links li:first-child {
     z-index: 2;
 }
 
-#loader{
-	height: 100vh;
-	width: 100%;
-	margin: auto;
-	background: white ;
+#custom-loader h1{
+	font-size: 40px
+}
+
+
+.owl-nav{
+	display: none;
 }

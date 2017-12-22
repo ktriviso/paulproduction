@@ -51,11 +51,11 @@ export default class Home extends Component {
                             </a>
 
                             <ul id="nav" className="nav">
-                            <li><a className="smoothscroll" href="#hero">Home.</a></li>
+                            <li className="current"><a className="smoothscroll" href="#hero">Home.</a></li>
                             <li><a className="smoothscroll" href="#about">About.</a></li>
                             <li><a className="smoothscroll" href="#testimonial-scroll">Testimonials.</a></li>
                             <li><a className="smoothscroll" href="#portfolio">Blog.</a></li>
-                            <li  className="current"><a className="smoothscroll" href="#contact">Contact.</a></li>
+                            <li><a className="smoothscroll" href="#contact">Contact.</a></li>
                             </ul>
                         </nav>
 
