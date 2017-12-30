@@ -14,7 +14,7 @@ export default class FeaturedBlogPosts extends Component {
             mouseDrag: false,
             smartSpeed: 400
         }
-        const post_html = featuredBlogPosts.map((post) => (
+        const post_html = featuredBlogPosts.splice(0,3).map((post) => (
             <li className="flex-active-slide">
                 <div className="flex-caption">
                     <h1 className="">{post.fields.blogTitle}</h1>
@@ -23,7 +23,7 @@ export default class FeaturedBlogPosts extends Component {
             </li>
         ))
         return (
-            <section id="hero" style={{backgroundImage: 'url(../../public/images/hero-bg.jpg)'}}>
+            <section id="hero">
                 <div className="row hero-content">
                     <div className="twelve columns hero-container">
                         <div id="hero-slider" className="flexslider">

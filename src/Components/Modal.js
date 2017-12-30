@@ -10,13 +10,13 @@ export default class Modal extends Component {
             <div id="modal-bg">
                 <div id="modal-01" className="popup-modal">
                     <div className="media">
-                        <img src="images/portfolio/underwater.jpg" alt="Underwater"/>
+                        <img src={this.props.blogPost.fields.blogImage.fields.file.url}/>
                     </div>
 
                     <div className="description-box">
-                        <h4>Underwater</h4>
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                        <span className="categories">Videography</span>
+                        <h4>{this.props.blogPost.fields.blogTitle}</h4>
+                        <p>{this.props.blogPost.fields.blogContent}</p>
+                        <span className="categories">{this.props.blogPost.fields.blogCategory}</span>
                     </div>
 
                     <div className="link-box group">

@@ -7,7 +7,7 @@ export default class Testimonials extends Component {
         return (
             <div className="row">
                 <div id="team-wrapper" className="bgrid-fourth s-bgrid-third tab-bgrid-half mob-bgrid-whole group">
-                {testimonials.map(function(testimonial){
+                {testimonials.splice(0, 4).map(function(testimonial){
                     return (
                         <div className="bgrid member">
                             <div className="member-pic">

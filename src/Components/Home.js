@@ -9,14 +9,17 @@ export default class Home extends Component {
         super(props)
 
         this.state = {
-            launchModal: false
+            launchModal: false,
+            activeBlogPost: {}
         }
     }
-    launchModal(e) {
-        e.preventDefault()
+    launchModal(blogPost) {
+
+        console.log(blogPost)
 
         this.setState({
-            launchModal: true
+            launchModal: true,
+            activeBlogPost: blogPost
             })
     }
     closeModal(){
@@ -53,7 +56,7 @@ export default class Home extends Component {
     render(){
         let modal
         if(this.state.launchModal) {
-            modal = <Modal handleCloseModal={this.closeModal.bind(this)}/>
+            modal = <Modal handleCloseModal={this.closeModal.bind(this)} blogPost={this.state.activeBlogPost}/>
         }
         var aboutGrid = this.props.data.aboutGrid
         var testimonials = this.props.data.testimonials
@@ -139,16 +142,16 @@ export default class Home extends Component {
                                     {blogPosts.map(function(blogPost){
 
                                         return (
-                                            <div className="bgrid folio-item" onClick={_this.launchModal.bind(_this)}>
-                                            <div className="item-wrap">
-                                                <img src={blogPost.fields.blogImage.fields.file.url}/>
-                                                <div className="overlay"></div>
-                                                <div className="portfolio-item-meta">
-                                                    <h5>{blogPost.fields.blogTitle}</h5>
-                                                    <p>{blogPost.fields.blogCategory}</p>
+                                            <div className="bgrid folio-item" onClick={_this.launchModal.bind(_this, blogPost)}>
+                                                <div className="item-wrap">
+                                                    <img src={blogPost.fields.blogImage.fields.file.url}/>
+                                                    <div className="overlay"></div>
+                                                    <div className="portfolio-item-meta">
+                                                        <h5>{blogPost.fields.blogTitle}</h5>
+                                                        <p>{blogPost.fields.blogCategory}</p>
+                                                    </div>
+                                                    <div className="link-icon"><i className="fa fa-plus"></i></div>
                                                 </div>
-                                                <div className="link-icon"><i className="fa fa-plus"></i></div>
-                                            </div>
                                             </div>
                                         )
                                     })}
