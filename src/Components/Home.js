@@ -25,6 +25,31 @@ export default class Home extends Component {
             })
 
     }
+    handleNameInput(e){
+        e.preventDefault()
+        this.setState({name: e.target.value})
+        console.log(e.target)
+    }
+    handleEmailInput(e){
+        e.preventDefault()
+        this.setState({email: e.target.value})
+        console.log(e.target)
+    }
+    handleNumberInput(e){
+        e.preventDefault()
+        this.setState({number: e.target.value})
+        console.log(e.target)
+    }
+    handleMessageInput(e){
+        e.preventDefault()
+        this.setState({message: e.target.value})
+        console.log(e.target)
+    }
+    handleSubmit(e){
+        e.preventDefault()
+        const data = new FormData(e.target)
+
+    }
     render(){
         let modal
         if(this.state.launchModal) {
@@ -144,19 +169,19 @@ export default class Home extends Component {
 
                     <div className="row">
                         <div id="contact-form" className="six columns tab-whole left">
-                            <form name="contactForm" id="contactForm" method="post" action=""  >
+                            <form name="contactForm" id="contactForm" method="post" action="" onSubmit={this.handleSubmit} >
                             <fieldset>
                                 <div className="group">
-                                    <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minLength="2" required />
+                                    <input name="contactName" type="text" id="contactName" placeholder="Name" value={this.state.name} onChange={this.handleNameInput.bind(this)} minLength="2" required />
                                 </div>
                                 <div>
-                                    <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required />
+                                    <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value={this.state.email} onChange={this.handleEmailInput.bind(this)} required />
                                 </div>
                                 <div>
-                                    <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject"  value="" />
+                                    <input name="contactSubject" type="text" id="contactSubject" placeholder="Number"  value={this.state.number} onChange={this.handleNumberInput.bind(this)}/>
                                 </div>
                                 <div>
-                                    <textarea name="contactMessage"  id="contactMessage" placeholder="Message" rows="10" cols="50" required ></textarea>
+                                    <textarea name="contactMessage"  id="contactMessage" placeholder="Message" value={this.state.message} onChange={this.handleMessageInput.bind(this)} rows="10" cols="50" required ></textarea>
                                 </div>
                                 <div>
                                     <button className="submitform">Submit</button>

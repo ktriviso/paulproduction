@@ -972,6 +972,20 @@ ul#nav li.current a:after {
 @media only screen and (min-width:769px) {
 	#nav-wrap ul#nav {
 		display: block !important;
+		position: absolute;
+		right: 35%;
+	}
+
+}
+
+@media only screen and (max-width:768px) {
+	#nav-wrap{
+		display: block !important;
+		position: absolute;
+		right: 0;
+	}
+	header .header-social {
+		display: none;
 	}
 
 }
