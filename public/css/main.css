@@ -640,7 +640,7 @@ header {
 	height: 66px;
 	width: 100%;
 	position: fixed;
-	left: 0;
+	left: 3%;
 	top: 0;
 	z-index: 600;
 	-moz-transition: all 0.5s ease-in-out;
@@ -715,10 +715,8 @@ header .header-social li a:hover {
 /* header/header components */
 @media only screen and (max-width:880px) {
 	header .header-social {
-		/*display: none;*/
-		float: right;
+		display: none;
 	}
-
 
 }
 
@@ -972,20 +970,6 @@ ul#nav li.current a:after {
 @media only screen and (min-width:769px) {
 	#nav-wrap ul#nav {
 		display: block !important;
-		position: absolute;
-		right: 35%;
-	}
-
-}
-
-@media only screen and (max-width:768px) {
-	#nav-wrap{
-		display: block !important;
-		position: absolute;
-		right: 0;
-	}
-	header .header-social {
-		display: none;
 	}
 
 }
@@ -996,7 +980,7 @@ ul#nav li.current a:after {
 /* =================================================================== */
 
 #hero {
-	background: #0F1215 url(../images/hero-bg.jpg) no-repeat center;
+	background-image: no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -2693,7 +2677,7 @@ footer .social-links li:first-child {
 	color: black;
 }
 
-
+/*
 .flex-active-slide {
 	width: 100%;
     float: left;
@@ -2702,7 +2686,7 @@ footer .social-links li:first-child {
     opacity: 1;
     display: block;
     z-index: 2;
-}
+}*/
 
 #custom-loader h1{
 	font-size: 40px

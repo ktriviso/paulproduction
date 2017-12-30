@@ -142,9 +142,7 @@ export default class Home extends Component {
                                             <div className="bgrid folio-item" onClick={_this.launchModal.bind(_this)}>
                                             <div className="item-wrap">
                                                 <img src={blogPost.fields.blogImage.fields.file.url}/>
-                                                <Link to={'/modal/' + blogPost.sys.id}>
-                                                    <div className="overlay"></div>
-                                                    </Link>
+                                                <div className="overlay"></div>
                                                 <div className="portfolio-item-meta">
                                                     <h5>{blogPost.fields.blogTitle}</h5>
                                                     <p>{blogPost.fields.blogCategory}</p>

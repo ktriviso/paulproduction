@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
-import OwlCarousel from 'react-owl-carousel2';
+import OwlCarousel from 'react-owl-carousel2'
 import {Link} from 'react-router-dom'
+
 
 export default class FeaturedBlogPosts extends Component {
     render() {
@@ -22,7 +23,7 @@ export default class FeaturedBlogPosts extends Component {
             </li>
         ))
         return (
-            <section id="hero">
+            <section id="hero" style={{backgroundImage: 'url(../../public/images/hero-bg.jpg)'}}>
                 <div className="row hero-content">
                     <div className="twelve columns hero-container">
                         <div id="hero-slider" className="flexslider">
@@ -33,7 +34,7 @@ export default class FeaturedBlogPosts extends Component {
                     </div>
                 </div>
                 <div id="more">
-                    <a class="smoothscroll" href="#services">More About Us<i class="fa fa-angle-down"></i></a>
+                    <a className="smoothscroll" href="#services">More About Us<i class="fa fa-angle-down"></i></a>
                 </div>
             </section>
         )
