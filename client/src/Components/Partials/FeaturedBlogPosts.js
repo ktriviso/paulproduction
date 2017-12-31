@@ -22,8 +22,14 @@ export default class FeaturedBlogPosts extends Component {
                 </div>
             </li>
         ))
+        const image_bg = this.props.siteImage.fields.image.fields.file.url
+        console.log(image_bg)
+        // #0F1215,
+        const hero_style = {
+            background: `url(${image_bg})`
+        }
         return (
-            <section id="hero">
+            <section id="hero" style={hero_style}>
                 <div className="row hero-content">
                     <div className="twelve columns hero-container">
                         <div id="hero-slider" className="flexslider">
@@ -34,7 +40,7 @@ export default class FeaturedBlogPosts extends Component {
                     </div>
                 </div>
                 <div id="more">
-                    <a className="smoothscroll" href="#services">More About Us<i class="fa fa-angle-down"></i></a>
+                    <a className="smoothscroll" href="#services">More About Us<i></i></a>
                 </div>
             </section>
         )

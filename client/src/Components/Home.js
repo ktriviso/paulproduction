@@ -71,6 +71,7 @@ export default class Home extends Component {
         var testimonials = this.props.data.testimonials
         var blogPosts = this.props.data.blogPosts
         var featuredBlogPosts = this.props.data.featuredBlogPosts
+        var siteImage = this.props.data.siteImage
         var _this = this
 
         return(
@@ -98,7 +99,7 @@ export default class Home extends Component {
                     </div>
                 </header>
 
-                <FeaturedBlogPosts featuredBlogPosts={featuredBlogPosts}/>
+                <FeaturedBlogPosts featuredBlogPosts={featuredBlogPosts} siteImage={siteImage}/>
 
                 <section id="about">
                     <div className="row section-head">

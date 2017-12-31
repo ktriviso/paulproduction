@@ -1005,11 +1005,13 @@ ul#nav li.current a:after {
 /* =================================================================== */
 
 #hero {
-	background: #0F1215 url(../images/hero-bg.jpg) no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	min-height: 630px;
+	/*background: #0F1215 no-repeat;*/
+	background-repeat: no-repeat!important;
+	-webkit-background-size: cover!important;
+	-moz-background-size: cover!important;
+	background-size: cover!important;
+	background-size: 100% 100%;
+	/*min-height: 630px;*/
 	width: 100%;
 	text-align: left;
 	position: relative;
