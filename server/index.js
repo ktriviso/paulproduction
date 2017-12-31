@@ -44,9 +44,9 @@ app.post('/sendEmail', function(request, response){
     const emailInfo = {
         from: data.email,
         to: emailConfig.user,
-        subject: 'You have a new email from ' + data.name + ' your website',
+        subject: 'You have a new email from ' + data.name + ' through your website',
         text: `${data.message}, ${data.number}`,
-        html: `${data.message}, ${data.number}`
+        html: `${data.message}, Contact Number: ${data.number}`
     }
     let responseStatus
     transporter.sendMail(emailInfo, function(error, info){

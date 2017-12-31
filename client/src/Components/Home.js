@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import Modal from './Modal'
 import Testimonial from './Partials/Testimonial'
 import axios from 'axios'
+import EmailStatus from './EmailStatus'
 
 export default class Home extends Component {
     constructor(props){
@@ -10,7 +11,8 @@ export default class Home extends Component {
 
         this.state = {
             launchModal: false,
-            activeBlogPost: {}
+            activeBlogPost: {},
+            emailWasSent: false
         }
     }
     launchModal(blogPost) {
@@ -56,6 +58,11 @@ export default class Home extends Component {
             data: _this.state
         }).then(function(response){
             console.log(response)
+            if(response.status === 200){
+                _this.setState({
+                    emailWasSent: true
+                })
+            }
         }).catch(function(error){
             console.log(error)
         })
@@ -63,6 +70,11 @@ export default class Home extends Component {
     }
     render(){
         let modal
+        let emailSuccess
+
+        if(this.state.emailWasSent){
+            emailSuccess = <EmailStatus/>
+        }
         if(this.state.launchModal) {
             modal = <Modal handleCloseModal={this.closeModal.bind(this)} blogPost={this.state.activeBlogPost}/>
         }
@@ -80,6 +92,7 @@ export default class Home extends Component {
         return(
             <div>
             {modal}
+            {emailSuccess}
                 <header id="main-header">
                     <div className="row">
 
@@ -104,15 +117,11 @@ export default class Home extends Component {
 
                 <section id="hero" style={hero_style}>
                     <div className="row hero-content">
-                        <div className="twelve columns hero-container">
-                            <div id="hero-slider" className="flexslider">
-                                <div className="slides">
-                                    <li className="flex-active-slide">
-                                        <div className="flex-caption">
-                                            <h1 className="">{siteHeader.fields.headerTitle}</h1>
-                                            <h3 className="">{siteHeader.fields.headerContent}</h3>
-                                        </div>
-                                    </li>
+                        <div id="hero-slider" className="flexslider">
+                            <div className="slides">
+                                <div className="flex-caption">
+                                    <h1 className="">{siteHeader.fields.headerTitle}</h1>
+                                    <h3 className="">{siteHeader.fields.headerContent}</h3>
                                 </div>
                             </div>
                         </div>
