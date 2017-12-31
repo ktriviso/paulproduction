@@ -131,6 +131,23 @@ p {
 	margin: 15px 0 15px 0;
 }
 
+@media only screen and (max-width:400px) {
+	p {
+		font-size: 12px!important;
+	}
+	h3 {
+		font-size: 14px!important;
+	}
+	h1 {
+		font-size: 14px!important;
+	}
+	button {
+		font-size: 12px!important;
+	}
+
+}
+
+
 p img {
 	margin: 0;
 }
@@ -640,7 +657,7 @@ header {
 	height: 66px;
 	width: 100%;
 	position: fixed;
-	left: 3%;
+	left: 0;
 	top: 0;
 	z-index: 600;
 	-moz-transition: all 0.5s ease-in-out;
@@ -822,9 +839,22 @@ ul#nav li.current a:after {
 	transition: all 0.3s ease-in-out;
 }
 
+@media only screen and (max-width:600px) {
+	ul#nav li a {
+		font-size: 10px;
+	}
+}
+
+
+@media only screen and (max-width:400px) {
+	ul#nav li a {
+		padding: 3px;
+	}
+}
+
 /* mobile navigation
 --------------------------------------------------------------------- */
-@media only screen and (max-width:768px) {
+/*@media only screen and (max-width:768px) {
 	#nav-wrap {
 		z-index: 700;
 		display: block;
@@ -835,7 +865,6 @@ ul#nav li.current a:after {
 		right: 0;
 	}
 
-	/* mobile-btn and toggle-btn */
 	#nav-wrap > a {
 		border: none;
 		color: #FFFFFF;
@@ -894,7 +923,6 @@ ul#nav li.current a:after {
 		top: 8px;
 	}
 
-	/* dropdown nav */
 	#nav-wrap ul#nav {
 		background: #1c212a;
 		padding: 54px 45px 60px 45px;
@@ -953,7 +981,6 @@ ul#nav li.current a:after {
 		display: block;
 	}
 
-	/* if js is disabled */
 	.no-js #nav-wrap:not(:target) > a:first-of-type,
 	.no-js #nav-wrap:target > a:last-of-type {
 		display: block;
@@ -965,14 +992,12 @@ ul#nav li.current a:after {
 
 }
 
-/* make sure the menu is visible on larger screens
---------------------------------------------------------------------- */
 @media only screen and (min-width:769px) {
 	#nav-wrap ul#nav {
 		display: block !important;
 	}
 
-}
+}*/
 
 
 /*
@@ -1330,6 +1355,12 @@ ul#nav li.current a:after {
 
 }
 
+@media only screen and (max-width:400px) {
+	#portfolio {
+		padding-top: 0px;
+	}
+}
+
 /* portfolio content */
 #portfolio-wrapper {
 	margin-top: 36px;
@@ -1607,6 +1638,15 @@ ul#nav li.current a:after {
 		margin: 0 20px;
 	}
 
+}
+@media only screen and (max-width:400px) {
+	.popup-modal {
+		max-height: 70vh;
+		overflow: scroll;
+	}
+	.popup-modal .description-box p {
+		font-size: 10px!important;
+	}
 }
 
 /* transition effect for modal popup
@@ -2691,6 +2731,32 @@ footer .social-links li:first-child {
 #custom-loader h1{
 	font-size: 40px
 }
+
+@media only screen and (max-width:400px) {
+
+	#loader {
+		position: absolute;
+		top: 50%;
+		left: 30%;
+		width: 50px;
+		height: 50px;
+		margin-left: -25px;
+		margin-top: -25px;
+
+	}
+
+	#side-loader{
+		position: absolute;
+		top: 50%;
+		left: 33%;
+		height: 50px;
+		margin-left: -23px;
+		margin-top: -21px;
+		font-size:1.5em!important;
+	}
+
+}
+
 
 
 .owl-nav{

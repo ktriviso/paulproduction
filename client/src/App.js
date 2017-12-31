@@ -33,7 +33,6 @@ class App extends Component {
         AppStore.addChangeListener(this._onChange.bind(this))
         var _this = this
         setTimeout(function(){
-            console.log('setTimeout is working')
             _this.setState({
                 removeLoader: true
             })
