@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
 import AppStore from './AppStore/AppStore.js'
 import routes from './routes.js'
 import {BrowserRouter} from 'react-router-dom'
 import AppDispatcher from './Dispatcher/Dispatcher.js'
-import {FeaturedBlogPosts} from './Components/Partials/FeaturedBlogPosts.js'
 import {Testimonial} from './Components/Partials/Testimonial.js'
 import {Modal} from './Components/Modal.js'
 import {Loader} from './Components/Partials/Loader.js'

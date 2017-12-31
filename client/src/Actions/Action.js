@@ -21,18 +21,14 @@ export const getAppStore = (callback) => {
         const blogPosts = _.filter(responseItems, (item) => {
             return item.sys.contentType.sys.id === 'blogPosts'
         })
-        const featuredBlogPosts = blogPosts.filter((post) => {
-            return post.fields.featuredBlogPost === true
-        })
-        const siteImage = _.find(responseItems, (item) => {
-            return item.sys.contentType.sys.id === 'siteImage'
+        const siteHeader = _.find(responseItems, (item) => {
+            return item.sys.contentType.sys.id === 'siteHeader'
         })
 
-        AppStore.data.featuredBlogPosts = featuredBlogPosts
         AppStore.data.aboutGrid = aboutGrid
         AppStore.data.testimonials = testimonials
         AppStore.data.blogPosts = blogPosts
-        AppStore.data.siteImage = siteImage
+        AppStore.data.siteHeader = siteHeader
         AppStore.data.ready = true
 
         AppStore.emitChange()

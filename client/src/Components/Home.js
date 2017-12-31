@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Modal from './Modal'
-import FeaturedBlogPosts from './Partials/FeaturedBlogPosts'
 import Testimonial from './Partials/Testimonial'
 import axios from 'axios'
 
@@ -70,9 +69,13 @@ export default class Home extends Component {
         var aboutGrid = this.props.data.aboutGrid
         var testimonials = this.props.data.testimonials
         var blogPosts = this.props.data.blogPosts
-        var featuredBlogPosts = this.props.data.featuredBlogPosts
-        var siteImage = this.props.data.siteImage
+        var siteHeader = this.props.data.siteHeader
         var _this = this
+
+        const image_bg = siteHeader.fields.headerImage.fields.file.url
+        const hero_style = {
+            background: `url(${image_bg})`
+        }
 
         return(
             <div>
@@ -99,7 +102,25 @@ export default class Home extends Component {
                     </div>
                 </header>
 
-                <FeaturedBlogPosts featuredBlogPosts={featuredBlogPosts} siteImage={siteImage}/>
+                <section id="hero" style={hero_style}>
+                    <div className="row hero-content">
+                        <div className="twelve columns hero-container">
+                            <div id="hero-slider" className="flexslider">
+                                <div className="slides">
+                                    <li className="flex-active-slide">
+                                        <div className="flex-caption">
+                                            <h1 className="">{siteHeader.fields.headerTitle}</h1>
+                                            <h3 className="">{siteHeader.fields.headerContent}</h3>
+                                        </div>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="more">
+                        <a className="smoothscroll" href="#services">More About Us<i></i></a>
+                    </div>
+                </section>
 
                 <section id="about">
                     <div className="row section-head">
