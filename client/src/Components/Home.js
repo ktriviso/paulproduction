@@ -16,9 +16,6 @@ export default class Home extends Component {
         }
     }
     launchModal(blogPost) {
-
-        console.log(blogPost)
-
         this.setState({
             launchModal: true,
             activeBlogPost: blogPost
@@ -33,26 +30,21 @@ export default class Home extends Component {
     handleNameInput(e){
         e.preventDefault()
         this.setState({name: e.target.value})
-        console.log(e.target)
     }
     handleEmailInput(e){
         e.preventDefault()
         this.setState({email: e.target.value})
-        console.log(e.target)
     }
     handleNumberInput(e){
         e.preventDefault()
         this.setState({number: e.target.value})
-        console.log(e.target)
     }
     handleMessageInput(e){
         e.preventDefault()
         this.setState({message: e.target.value})
-        console.log(e.target)
     }
     handleSubmit(e){
         e.preventDefault()
-        console.log(this.state)
         const _this = this
         axios.post('sendEmail', {
             data: _this.state

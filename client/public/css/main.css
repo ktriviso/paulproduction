@@ -62,7 +62,7 @@ a:visited {
 
 a:hover,
 a:focus {
-	color: #fdc501;
+	color: #E89B0D;
 }
 
 /* Typography
@@ -284,7 +284,7 @@ dl {
 
 dt {
 	margin: 0;
-	color: #fdc501;
+	color: #E89B0D;
 }
 
 dd {
@@ -391,7 +391,7 @@ img.pull-left {
 	height: 50px;
 	margin-left: -25px;
 	margin-top: -25px;
-	background-color: #fdc501;
+	background-color: #E89B0D;
 	-webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
 	animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
@@ -510,7 +510,7 @@ input[type="button"] {
 	font: 16px/30px "raleway-heavy", sans-serif;
 	padding: 9px 16px;
 	margin: 0 3px 6px 0;
-	background: #fdc501;
+	background: #E89B0D;
 	color: #000000;
 	text-decoration: none;
 	cursor: pointer;
@@ -600,7 +600,7 @@ hr {
 }
 
 .section-head h1 span {
-	color: #fdc501;
+	color: #E89B0D;
 	position: relative;
 	left: 3px;
 }
@@ -611,7 +611,7 @@ hr {
 }
 
 .section-head:hover h1 + hr {
-	border-color: #fdc501;
+	border-color: #E89B0D;
 	width: 120px;
 	text-align: left;
 }
@@ -665,8 +665,7 @@ header {
 	-webkit-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
-
-
+	background-color: black;
 }
 header.opaque {
 	background: black;
@@ -675,7 +674,7 @@ header.opaque {
 
 /* header logo */
 header .logo {
-	background: #fdc501;
+	background: #E89B0D;
 	float: left;
 	width: auto;
 	margin-left: 15px;
@@ -725,7 +724,7 @@ header .header-social li a {
 }
 
 header .header-social li a:hover {
-	color: #fdc501;
+	color: #E89B0D;
 }
 
 /* media queries:
@@ -811,7 +810,7 @@ ul#nav li a {
 }
 
 ul#nav li a:hover {
-	color: #fdc501;
+	color: #E89B0D;
 }
 
 ul#nav li a:active {
@@ -819,7 +818,7 @@ ul#nav li a:active {
 }
 
 ul#nav li.current a {
-	color: #fdc501;
+	color: #E89B0D;
 }
 
 ul#nav li.current a:after {
@@ -894,7 +893,7 @@ ul#nav li.current a:after {
 		top: 50%;
 		bottom: auto;
 		left: auto;
-		background: #fdc501;
+		background: #E89B0D;
 		-moz-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
 		-webkit-transition: all 0.3s ease-in-out;
@@ -966,7 +965,7 @@ ul#nav li.current a:after {
 
 	#nav-wrap ul#nav li.current > a {
 		background: none;
-		color: #fdc501;
+		color: #E89B0D;
 	}
 
 	#nav-wrap ul#nav li.current > a:after {
@@ -1013,9 +1012,11 @@ ul#nav li.current a:after {
 	background-size: 100% 100%;
 	/*min-height: 630px;*/
 	width: 100%;
+	min-height: 90vh;
 	text-align: left;
 	position: relative;
 	border-bottom: 1px solid #15191d;
+	background-position: center top!important;
 }
 
 .hero-content {
@@ -1050,7 +1051,7 @@ ul#nav li.current a:after {
 
 #hero-slider .slides .flex-caption h1::after {
 	display: block;
-	background-color: #fdc501;
+	background-color: #E89B0D;
 	width: 100px;
 	height: 3px;
 	content: '\0020';
@@ -1267,7 +1268,7 @@ ul#nav li.current a:after {
 }
 
 #hero .flex-control-paging li a.flex-active {
-	background: #fdc501;
+	background: #E89B0D;
 	cursor: default;
 }
 
@@ -1309,7 +1310,7 @@ ul#nav li.current a:after {
 }
 
 #hero #more a:hover {
-	background: #fdc501;
+	background: #E89B0D;
 	color: #000000;
 }
 
@@ -1627,7 +1628,7 @@ ul#nav li.current a:after {
 }
 
 .popup-modal .link-box a:hover {
-	background: #fdc501;
+	background: #E89B0D;
 	color: #000000;
 	border: none;
 }
@@ -1768,7 +1769,7 @@ ul#nav li.current a:after {
 
 #services .service-list h3 {
 	font: 18px/36px "raleway-heavy", sans-serif;
-	color: #fdc501;
+	color: #E89B0D;
 	padding: 0;
 	text-transform: none;
 	text-align: left;
@@ -1824,7 +1825,7 @@ ul#nav li.current a:after {
 
 #about h3 {
 	font: 18px/36px "raleway-heavy", sans-serif;
-	color: #fdc501;
+	color: #E89B0D;
 	text-transform: none;
 	letter-spacing: 0;
 	padding: 0;
@@ -1901,7 +1902,7 @@ ul#nav li.current a:after {
 	bottom: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(253, 197, 1, 0.5);
+	background: rgba(232, 155, 13, 0.5);
 	filter: alpha(opacity=0);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	opacity: 0;
@@ -2016,7 +2017,7 @@ ul#nav li.current a:after {
 }
 
 #call-to-action h2 span {
-	color: #fdc501;
+	color: #E89B0D;
 }
 
 #call-to-action h2 a,
@@ -2050,7 +2051,7 @@ ul#nav li.current a:after {
 }
 
 #call-to-action .action a:hover {
-	background: #fdc501;
+	background: #E89B0D;
 	color: #000000;
 }
 
@@ -2267,7 +2268,7 @@ ul#nav li.current a:after {
 
 #contact h3 {
 	font: 18px/36px "raleway-heavy", sans-serif;
-	color: #fdc501;
+	color: #E89B0D;
 	padding: 0;
 	margin-bottom: 6px;
 }
@@ -2396,7 +2397,7 @@ input[type="email"],
 }
 
 #message-success {
-	color: #fdc501;
+	color: #E89B0D;
 }
 
 #message-warning i,
@@ -2529,7 +2530,7 @@ footer a:visited {
 
 footer a:hover,
 footer a:focus {
-	color: #fdc501;
+	color: #E89B0D;
 }
 
 footer hr {
@@ -2682,7 +2683,7 @@ footer .social-links li:first-child {
 }
 
 #go-top a:hover {
-	background: #fdc501;
+	background: #E89B0D;
 	color: #000000;
 }
 
@@ -2715,7 +2716,7 @@ footer .social-links li:first-child {
 }
 
 #contact button.submitform:hover {
-	background: #fdc501;
+	background: #E89B0D;
 	color: black;
 }
 
