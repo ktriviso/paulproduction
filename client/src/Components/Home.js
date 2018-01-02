@@ -257,8 +257,18 @@ export default class Home extends Component {
                             <hr />
                             </div>
                             <ul className="copyright">
-                                <li>&copy; Copyright 2015 KREO.</li>
-                                <li>Design by <a href="http://www.styleshout.com/">Styleshout.</a>.</li>
+                            <a href="https://github.com/ktriviso" target="_blank">
+                                <div class="logo">
+                                    <div class="icon animate">
+                                        <span>K</span>
+                                        <span>T</span>
+                                    </div>
+                                    <div class="pipe animate">|</div>
+                                    <div class="name animate">Krista Triviso</div>
+                                </div>
+                            </a>
+                                <li>&copy; Copyright 2015 PR-Programming.</li>
+                                <li>Design by <a href="#">Styleshout.</a>.</li>
                             </ul>
                             <div id="go-top">
                                 <a className="smoothscroll" title="Back to Top" href="#hero">Back to Top<i className="fa fa-angle-up"></i></a>

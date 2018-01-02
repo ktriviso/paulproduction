@@ -673,7 +673,7 @@ header.opaque {
 }
 
 /* header logo */
-header .logo {
+header #logo {
 	background: #E89B0D;
 	float: left;
 	width: auto;
@@ -686,7 +686,7 @@ header .logo {
 	position: relative;
 }
 
-header .logo a {
+header #logo a {
 	display: block;
 	margin: 0;
 	padding: 0;
@@ -746,7 +746,7 @@ header .header-social li a:hover {
 		width: 100%;
 	}
 
-	header .logo {
+	header #logo {
 		margin-left: -30px;
 	}
 
@@ -2833,4 +2833,100 @@ footer .social-links li:first-child {
 
 .contact-span{
 	color: #E89B0D;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,700);
+.logo {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.logo .animate {
+  -webkit-animation: logo 1s;
+  -moz-animation: logo 1s;
+  animation: logo 1s;
+}
+.logo .icon {
+  display: inline-block;
+}
+.logo .icon span {
+  display: inline-block;
+  vertical-align: middle;
+  font: 400 11px "Roboto";
+}
+.logo .icon span:first-of-type {
+  /*margin-right: -15px;*/
+  margin-top: 0px;
+}
+.logo .pipe {
+  display: inline-block;
+  vertical-align: middle;
+  font: 100 24px "Roboto";
+  /*margin-top: -10px;*/
+}
+.logo .pipe.animate {
+  -webkit-animation: openPipe 1s;
+  -moz-animation: openPipe 1s;
+  animation: openPipe 1s;
+}
+.logo .name {
+  display: inline-block;
+  vertical-align: middle;
+  font: 100 17px "Roboto";
+}
+.logo .name.animate {
+  -webkit-animation: slideName 2s;
+  -moz-animation: slideName 2s;
+  animation: slideName 2s;
+}
+
+@keyframes logo {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes openPipe {
+  0%, 50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slideUp {
+  0%, 50% {
+    margin-bottom: -100%;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
+@keyframes slideName {
+  0%, 40% {
+    transform: scale(0);
+    opacity: 0;
+    margin-left: -100%;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0%;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@media (max-width: 500px) {
+  .logo {
+    width: 113px;
+  }
+  .logo .pipe, .logo .name {
+    display: none;
+  }
 }
