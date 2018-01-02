@@ -99,10 +99,10 @@ export default class Home extends Component {
                         </nav>
 
                         <ul className="header-social">
-                            <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i className="fa fa-youtube-play"></i></a></li>
-                            <li><a href="#"><i className="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/paul.roller.5" target="_blank"><i className="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/mr_p_r_?lang=en" target="_blank"><i className="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCpsHvOv3nK96N-hh4TxZ0mg" target="_blank"><i className="fa fa-youtube-play"></i></a></li>
+                            <li><a href="https://www.instagram.com/pr_programming/" target="_blank"><i className="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </header>
@@ -230,16 +230,15 @@ export default class Home extends Component {
 
                     <div className="six columns tab-whole right">
                         <h3>Contact Information:</h3>
-                        <p>Mobile: (570) 590 8251<br/>
-                        Email: paul@outbreakfitness.com <br/>
+                        <p>Number: (570) 590 8251<br/>
+                        Email: info.prprogramming@gmail.com <br/>
                         </p>
 
                         <h3 className="address">Affiliated Gyms</h3>
                         <p>
-                        CrossFit Outbreak East Williamsburg<br/>
-                        208 Frost Street<br/>
-                        Brooklyn, Ny<br/>
-                        11211 US
+                        CrossFit Outbreak<br/>
+                        Clinton Hill <span className="contact-span">|</span> E. Williamsburg <span className="contact-span">|</span> Williamsburg <span className="contact-span">|</span> Bed Stuy<br/>
+                        New York<br/>
                         </p>
 
                     </div>
@@ -250,10 +249,10 @@ export default class Home extends Component {
                     <div className="row">
                         <div className="twelve columns content group">
                             <ul className="social-links">
-                                <li><a href="http://www.facebook.com/paul.roller.5"><i className="fa fa-facebook-square"></i></a></li>
-                                <li><a href="#"><i className="fa fa-twitter-square"></i></a></li>
-                                <li><a href="#"><i className="fa fa-youtube-play"></i></a></li>
-                                <li><a href="#"><i className="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/paul.roller.5" target="_blank"><i className="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/mr_p_r_?lang=en" target="_blank"><i className="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCpsHvOv3nK96N-hh4TxZ0mg" target="_blank"><i className="fa fa-youtube-play"></i></a></li>
+                                <li><a href="https://www.instagram.com/pr_programming/" target="_blank"><i className="fa fa-instagram"></i></a></li>
                             </ul>
                             <hr />
                             </div>

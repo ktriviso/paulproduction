@@ -2829,3 +2829,8 @@ footer .social-links li:first-child {
     transform: rotate(360deg);
   }
 }
+
+
+.contact-span{
+	color: #E89B0D;
+}
