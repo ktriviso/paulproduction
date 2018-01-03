@@ -51,6 +51,7 @@ export default class Home extends Component {
         }).then(function(response){
             console.log(response)
             if(response.status === 200){
+                console.log(response.status)
                 _this.setState({
                     emailWasSent: true
                 })

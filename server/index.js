@@ -1,16 +1,18 @@
+require('dotenv').load()
+
 const express = require('express')
 const nodemailer = require('nodemailer')
 const path = require('path')
 const bodyparser = require('body-parser')
 const app = express()
 
-require('dotenv').load()
+
 
 const emailConfig = {
     host: 'smtp.gmail.com',
     port: 465,
     secure: true,
-    user: 'krista.triviso91@gmail.com',
+    user: 'info.prprogramming@gmail.com',
     password: process.env.EMAIL_PASSWORD
 }
 
