@@ -7,6 +7,7 @@ import AppDispatcher from './Dispatcher/Dispatcher.js'
 import {Testimonial} from './Components/Partials/Testimonial.js'
 import {Modal} from './Components/Modal.js'
 import {Loader} from './Components/Partials/Loader.js'
+import Header from './Components/Partials/Header.js'
 
 class App extends Component {
     constructor(props) {
@@ -54,6 +55,7 @@ class App extends Component {
           return (
               <BrowserRouter>
                   <div>
+                      <Header />
                       {routes}
                   </div>
               </BrowserRouter>

@@ -12,7 +12,11 @@ export default class Home extends Component {
         this.state = {
             launchModal: false,
             activeBlogPost: {},
-            emailWasSent: false
+            emailWasSent: false,
+            name: '',
+            email: '',
+            number: '',
+            message: ''
         }
     }
     launchModal(blogPost) {
@@ -86,27 +90,7 @@ export default class Home extends Component {
             <div>
             {modal}
             {emailSuccess}
-                <header id="main-header">
-                    <div className="row">
-
-                        <nav id="nav-wrap">
-                            <ul id="nav" className="nav">
-                                <li className="current"><a className="smoothscroll" href="#hero">Home.</a></li>
-                                <li><a className="smoothscroll" href="#about">About.</a></li>
-                                <li><a className="smoothscroll" href="#testimonial-scroll">Testimonials.</a></li>
-                                <li><a className="smoothscroll" href="#portfolio">Blog.</a></li>
-                                <li><a className="smoothscroll" href="#contact">Contact.</a></li>
-                            </ul>
-                        </nav>
-
-                        <ul className="header-social">
-                            <li><a href="https://www.facebook.com/paul.roller.5" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                            <li><a href="https://twitter.com/mr_p_r_?lang=en" target="_blank"><i className="fa fa-twitter"></i></a></li>
-                            <li><a href="https://www.youtube.com/channel/UCpsHvOv3nK96N-hh4TxZ0mg" target="_blank"><i className="fa fa-youtube-play"></i></a></li>
-                            <li><a href="https://www.instagram.com/pr_programming/" target="_blank"><i className="fa fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                </header>
+                
 
                 <section id="hero" style={hero_style}>
                     <div className="row hero-content">
@@ -223,10 +207,6 @@ export default class Home extends Component {
 
                             </fieldset>
                         </form>
-                        <div id="message-warning"></div>
-                        <div id="message-success">
-                            <i className="icon-ok"></i>Your message was sent, thank you!<br />
-                            </div>
                     </div>
 
                     <div className="six columns tab-whole right">
