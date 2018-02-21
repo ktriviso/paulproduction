@@ -1452,13 +1452,17 @@ a:visited {
 
 .folio-item .item-wrap img {
 	vertical-align: bottom;
-	min-height: 225.594px;
+	height: 225.594px;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	-webkit-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 	padding: 10px;
+	display: block;
+	margin: auto;
+	object-fit: cover;
+	width: 100%;
 }
 
 .folio-item .portfolio-item-meta {
