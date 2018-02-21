@@ -112,7 +112,7 @@ export default class Home extends Component {
                 <section id="about">
                     <div className="row section-head">
                         <div className="twelve columns">
-                            <h1>About Our Head Coach<span>.</span></h1>
+                            <h1>About Our Head Coach Paul Roller<span>.</span></h1>
                             <hr />
                             <div className='container'>
                                 <img className='bio-picture' src='./Headshot.jpg'/>
