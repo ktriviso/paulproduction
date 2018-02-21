@@ -90,7 +90,7 @@ export default class Home extends Component {
             <div>
             {modal}
             {emailSuccess}
-                
+
 
                 <section id="hero" style={hero_style}>
                     <div className="row hero-content">
@@ -98,6 +98,7 @@ export default class Home extends Component {
                             <div className="slides">
                                 <div className="flex-caption">
                                     <h1 className="">{siteHeader.fields.headerTitle}</h1>
+                                    <h2>PR Programming Powered by Crossfit Outbreak</h2>
                                     <h3 className="">{siteHeader.fields.headerContent}</h3>
                                 </div>
                             </div>
@@ -113,7 +114,10 @@ export default class Home extends Component {
                         <div className="twelve columns">
                             <h1>About Our Head Coach<span>.</span></h1>
                             <hr />
-                            <p>Paul has an obsessive passion for learning the latest techniques in strength and conditioning, and using them to help others achieve their goals. Paul bases his knowledge on scientifically researched and well-tested protocols. He currently spends his time coaching at CrossFit Outbreak in Brooklyn, New York, coaching classes and designing training programs for general clients and competitive athletes alike. </p>
+                            <div className='container'>
+                                <img className='bio-picture' src='./Headshot.jpg'/>
+                                <p>Paul has an obsessive passion for learning the latest techniques in strength and conditioning, and using them to help others achieve their goals. Paul bases his knowledge on scientifically researched and well-tested protocols. He currently spends his time coaching at CrossFit Outbreak in Brooklyn, New York, coaching classes and designing training programs for general clients and competitive athletes alike. </p>
+                            </div>
                         </div>
                     </div>
 
@@ -148,8 +152,6 @@ export default class Home extends Component {
                         <div className="twelve columns">
                             <h1>Our Blog Posts<span>.</span></h1>
                             <hr />
-                            <p>So you made the leap of signing up for a gym membership. You know you want to become more fit, but you may not know exactly what your goals are or what classes to take to achieve those goals. Our blog will introduce you to a litany of educational tips and tricks, from various forms of exercise to what kind of adaptations will stimulate in your body. We aim to create awareness around fitness and the advantages of the individualized approach. Visit our blog weekly for our latest and greatest posts.
-                            </p>
                         </div>
                     </div>
 
@@ -179,7 +181,7 @@ export default class Home extends Component {
                 <section id="contact">
                     <div className="row section-head">
                         <div className="twelve columns">
-                            <h1>Get In Touch With Us<span>.</span></h1>
+                            <h1>Fill out this form to get started!<span>.</span></h1>
                             <hr />
                         </div>
                     </div>
@@ -231,7 +233,6 @@ export default class Home extends Component {
                         <div className="twelve columns content group">
                             <ul className="social-links">
                                 <li><a href="https://www.facebook.com/paul.roller.5" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                                <li><a href="https://twitter.com/mr_p_r_?lang=en" target="_blank"><i className="fa fa-twitter"></i></a></li>
                                 <li><a href="https://www.youtube.com/channel/UCpsHvOv3nK96N-hh4TxZ0mg" target="_blank"><i className="fa fa-youtube-play"></i></a></li>
                                 <li><a href="https://www.instagram.com/pr_programming/" target="_blank"><i className="fa fa-instagram"></i></a></li>
                             </ul>

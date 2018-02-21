@@ -44,7 +44,6 @@ export default class Header extends Component {
 
                     <ul className="header-social">
                         <li><a href="https://www.facebook.com/paul.roller.5" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/mr_p_r_?lang=en" target="_blank"><i className="fa fa-twitter"></i></a></li>
                         <li><a href="https://www.youtube.com/channel/UCpsHvOv3nK96N-hh4TxZ0mg" target="_blank"><i className="fa fa-youtube-play"></i></a></li>
                         <li><a href="https://www.instagram.com/pr_programming/" target="_blank"><i className="fa fa-instagram"></i></a></li>
                     </ul>
