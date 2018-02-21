@@ -98,7 +98,7 @@ export default class Home extends Component {
                             <div className="slides">
                                 <div className="flex-caption">
                                     <h1 className="">{siteHeader.fields.headerTitle}</h1>
-                                    <h2>PR Programming Powered by Crossfit Outbreak</h2>
+                                    <h2>Powered by Crossfit Outbreak</h2>
                                     <h3 className="">{siteHeader.fields.headerContent}</h3>
                                 </div>
                             </div>
