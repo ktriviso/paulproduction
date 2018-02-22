@@ -1,3 +1,13 @@
+
+    handleCloseModal(e){
+        e.preventDefault()
+        this.props.handleCloseModal()
+    }
+
+    <div className="link-box group">
+        <a href="#" className="popup-modal-dismiss" onClick={this.handleCloseModal.bind(this)}>Close</a>
+    </div>
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

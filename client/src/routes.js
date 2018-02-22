@@ -2,12 +2,18 @@ import React from 'react'
 import {Route} from 'react-router-dom'
 import AppStore from './AppStore/AppStore.js'
 import Home from './Components/Home.js'
+import Modal from './Components/Modal.js'
 
 const routes_with_components = [
     {
         path: '/',
         exact: true,
         component: Home
+    },
+    {
+        path: '/blog/:blogPostId',
+        exact: true,
+        component: Modal
     }
 ]
 

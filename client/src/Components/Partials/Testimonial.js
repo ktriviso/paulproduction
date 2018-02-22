@@ -10,7 +10,6 @@ export default class Testimonials extends Component {
         if(testimonials.length > 0){
             this.setState(testimonials)
             localStorage.setItem('testimonials', JSON.stringify(testimonials))
-            console.log(localStorage)
         } else {
             testimonials = JSON.parse(localStorage.getItem('testimonials'))
             this.setState(testimonials)

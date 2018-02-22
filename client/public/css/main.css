@@ -72,7 +72,7 @@ h4,
 h5,
 h6 {
 	font-family: "raleway-heavy", sans-serif;
-	color: #FFFFFF;
+	/*color: #FFFFFF;*/
 	font-style: normal;
 	text-rendering: optimizeLegibility;
 	margin: 18px 0 15px;
@@ -667,7 +667,7 @@ header {
 	position: fixed;
 	left: 0;
 	top: 0;
-	z-index: 600;
+	z-index: 3000;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	-webkit-transition: all 0.5s ease-in-out;
@@ -1572,8 +1572,8 @@ a:visited {
 }
 
 .popup-modal .media {
-	position: relative;
-	padding: 40px;
+	margin: auto;
+	padding-top: 9rem
 }
 
 .popup-modal img {
@@ -2531,6 +2531,10 @@ footer {
 	padding-bottom: 24px;
 	position: relative;
 	color: rgba(255, 255, 255, 0.15);
+	z-index: 2000;
+	background-color: black;
+    bottom: 0;
+    width: 100%
 }
 
 footer .content {
