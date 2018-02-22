@@ -13,9 +13,9 @@ class App extends Component {
     constructor(props) {
     super(props)
 
-    this.state = {
-        removeLoader: false
-    }
+        this.state = {
+            removeLoader: false
+        }
     }
     getStore(){
         let payload = {

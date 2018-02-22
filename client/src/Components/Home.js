@@ -240,13 +240,13 @@ export default class Home extends Component {
                             </div>
                             <ul className="copyright">
                             <a href="https://github.com/ktriviso" target="_blank">
-                                <div class="logo">
-                                    <div class="icon animate">
+                                <div className="logo">
+                                    <div className="icon animate">
                                         <span>K</span>
                                         <span>T</span>
                                     </div>
-                                    <div class="pipe animate">|</div>
-                                    <div class="name animate">Krista Triviso</div>
+                                    <div className="pipe animate">|</div>
+                                    <div className="name animate">Krista Triviso</div>
                                 </div>
                             </a>
                                 <li>&copy; Copyright 2015 PR-Programming.</li>

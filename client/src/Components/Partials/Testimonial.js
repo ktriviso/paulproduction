@@ -1,13 +1,29 @@
 import React, {Component} from 'react'
 
 export default class Testimonials extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    componentDidMount(){
+        let {testimonials} = this.props
+        if(testimonials.length > 0){
+            this.setState(testimonials)
+            localStorage.setItem('testimonials', JSON.stringify(testimonials))
+            console.log(localStorage)
+        } else {
+            testimonials = JSON.parse(localStorage.getItem('testimonials'))
+            this.setState(testimonials)
+        }
+    }
+
     render() {
         var testimonials = this.props.testimonials
 
         return (
             <div className="row">
                 <div id="team-wrapper" className="bgrid-fourth s-bgrid-third tab-bgrid-half mob-bgrid-whole group">
-                {testimonials.splice(0, 4).map(function(testimonial){
+                {testimonials.map(function(testimonial){
                     return (
                         <div className="bgrid member">
                             <div className="member-pic">
