@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+const ReactDOM = require('react-dom')
+const ReactMarkdown = require('react-markdown')
 
 export default class Modal extends Component {
     handleCloseModal(e){
@@ -15,7 +17,7 @@ export default class Modal extends Component {
 
                     <div className="description-box">
                         <h4>{this.props.blogPost.fields.blogTitle}</h4>
-                        <p>{this.props.blogPost.fields.blogContent}</p>
+                        <ReactMarkdown source={this.props.blogPost.fields.blogContent} />
                         <span className="categories">{this.props.blogPost.fields.blogCategory}</span>
                     </div>
 
