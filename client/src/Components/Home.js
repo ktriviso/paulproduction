@@ -160,7 +160,7 @@ export default class Home extends Component {
                                     {blogPosts.map(function(blogPost){
 
                                         return (
-                                            <div className="bgrid folio-item" onClick={_this.launchModal.bind(_this, blogPost)}>
+                                            <div className="bgrid folio-item">
                                                 <div className="item-wrap">
                                                 <Link to={'/blog/' + blogPost.sys.id}><img src={blogPost.fields.blogImage.fields.file.url}/></Link>
 
