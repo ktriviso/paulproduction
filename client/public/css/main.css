@@ -75,7 +75,7 @@ h6 {
 	/*color: #FFFFFF;*/
 	font-style: normal;
 	text-rendering: optimizeLegibility;
-	margin: 18px 0 15px;
+	/*margin: 18px 0 15px;*/
 }
 
 h1 a,
@@ -88,7 +88,7 @@ h6 a {
 }
 
 h1 {
-	font-size: 30px;
+	/*font-size: 30px;*/
 	line-height: 36px;
 	margin-top: 0;
 	letter-spacing: -1px;
@@ -133,11 +133,11 @@ p {
 	p {
 		font-size: 12px!important;
 	}
-	h3 {
+	/*h3 {
 		font-size: 14px!important;
 	}
 	h1 {
-		font-size: 14px!important;
+		font-size: 14px!important;*/
 	}
 	button {
 		font-size: 12px!important;
@@ -616,6 +616,8 @@ hr {
 .section-head p {
 	font: 20px/36px "merriweather-light", serif;
 	width: 70%;
+	margin-top: 0;
+	text-align: left;
 }
 
 .section-head:hover h1 + hr {
@@ -1123,7 +1125,7 @@ a:visited {
 	}
 
 	#hero-slider .slides .flex-caption h1 {
-		font: 43px/1.3 "raleway-bold", sans-serif;
+		font: 40px/1.3 "raleway-bold", sans-serif;
 	}
 
 	#hero-slider .slides .flex-caption h1::after {
@@ -1131,11 +1133,21 @@ a:visited {
 		left: 50%;
 	}
 
+	#hero-slider .slides .flex-caption h2 {
+		line-height: 50px;
+	}
+
+	#hero-slider .slides .flex-caption h2::after {
+		position: relative;
+		margin: auto;
+	}
+
 	#hero-slider .slides .flex-caption h3 {
 		font: 16px/1.9 "merriweather-light", sans-serif;
 		width: 80%;
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 0;
 	}
 
 }
@@ -1194,7 +1206,7 @@ a:visited {
 
 }
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:550px) {
 	.hero-content {
 		padding-bottom: 72px;
 	}
@@ -1209,16 +1221,20 @@ a:visited {
 	}
 
 	#hero-slider .slides .flex-caption h1 {
-		font: 36px/1.3 "raleway-bold", sans-serif;
+		font: 28px/1.3 "raleway-bold", sans-serif;
 	}
 
+	#hero-slider .slides .flex-caption h2 {
+		font: 18px/1.3 "raleway-bold", sans-serif;
+		line-height: 40px;
+	}
 	#hero-slider .slides .flex-caption h3 {
 		width: auto;
 	}
 
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:460px) {
 	.hero-content {
 		padding-bottom: 54px;
 	}
@@ -1232,7 +1248,11 @@ a:visited {
 	}
 
 	#hero-slider .slides .flex-caption h1 {
-		font: 30px/1.3 "raleway-bold", sans-serif;
+		font: 30px;
+	}
+
+	#hero-slider .slides .flex-caption h2 {
+		font: 20px;
 	}
 
 }
@@ -1336,7 +1356,7 @@ a:visited {
 
 #portfolio {
 	background: #111417;
-	padding-top: 120px;
+	padding-top: 80px;
 	border-bottom: 1px solid #15191d;
 }
 
@@ -1556,6 +1576,9 @@ a:visited {
 	.folio-item .portfolio-item-meta h5 {
 		font: 11px/18px "raleway-bold", sans-serif;
 		letter-spacing: 1px;
+		font-size: 18px;
+		padding: 2rem;
+		margin-top: 3rem;
 	}
 
 	.folio-item .portfolio-item-meta p {
@@ -1592,6 +1615,27 @@ a:visited {
 /* description */
 .popup-modal .description-box {
 	padding: 6px 100px 50px 100px;
+}
+
+.popup-modal .description-box h2 {
+	line-height: 40px;
+}
+
+@media only screen and (max-width:768px) {
+	.popup-modal .description-box {
+		padding: 6px 50px 50px 50px;
+	}
+
+}
+
+@media only screen and (max-width:600px) {
+	.popup-modal .description-box {
+		padding: 6px 30px 40px 30px;
+	}
+	.popup-modal .media {
+		padding-top: 1rem
+	}
+
 }
 
 .popup-modal .description-box h4 {
@@ -1836,8 +1880,8 @@ a:visited {
 
 #about {
 	background: #111417;
-	padding-top: 120px;
-	padding-bottom: 120px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 	border-bottom: 1px solid #15191d;
 }
 
