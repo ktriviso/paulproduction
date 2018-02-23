@@ -8,6 +8,28 @@
         <a href="#" className="popup-modal-dismiss" onClick={this.handleCloseModal.bind(this)}>Close</a>
     </div>
 
+    componentDidMount(){
+        const path = window.location.pathname
+        let active
+        if(path.includes('about')) {
+            active = 'about'
+        } else if(path.includes('testimonial-scroll')) {
+            active = 'testimonial'
+        } else if(path.includes('portfolio')) {
+            active = 'blog'
+        } else if(path.includes('contact')) {
+            active = 'contact'
+        } else {
+            active = 'home'
+        }
+        this.setState({
+            active: active
+        })
+    }
+
+
+     className={this.state.active === 'blog' ? 'current': ''}
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

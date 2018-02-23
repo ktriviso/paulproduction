@@ -40,7 +40,7 @@ app.use(function(request, response, next){
 
 app.use(express.static(path.resolve(__dirname, '../client/build')))
 app.get('*', function(request, response){
-    r
+    response.sendFile(path.resolve(__dirname, '../client/build', 'index.html'))
 })
 app.post('/sendEmail', function(request, response){
     console.log(request.body)

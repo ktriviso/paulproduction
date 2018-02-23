@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 
 export default class Header extends Component {
     constructor(props){
@@ -8,25 +9,6 @@ export default class Header extends Component {
         }
     }
 
-    componentDidMount(){
-        const path = window.location.pathname
-        let active
-        if(path.includes('about')) {
-            active = 'about'
-        } else if(path.includes('testimonial-scroll')) {
-            active = 'testimonial'
-        } else if(path.includes('portfolio')) {
-            active = 'blog'
-        } else if(path.includes('contact')) {
-            active = 'contact'
-        } else {
-            active = 'home'
-        }
-        this.setState({
-            active: active
-        })
-    }
-
     render(){
         return(
             <header id="main-header">
@@ -34,11 +16,11 @@ export default class Header extends Component {
 
                     <nav id="nav-wrap">
                         <ul id="nav" className="nav">
-                            <li className={this.state.active === 'home' ? 'current' : ''}><a className="smoothscroll" href="#hero">Home.</a></li>
-                            <li className={this.state.active === 'about' ? 'current': ''}><a className="smoothscroll" href="#about">About.</a></li>
-                            <li className={this.state.active === 'testimonal' ? 'current': ''}><a className="smoothscroll" href="#testimonial-scroll">Testimonials.</a></li>
-                            <li className={this.state.active === 'blog' ? 'current': ''}><a className="smoothscroll" href="#portfolio">Blog.</a></li>
-                            <li className={this.state.active === 'contact' ? 'current': ''}><a className="smoothscroll" href="#contact">Contact.</a></li>
+                            <Link to={{pathname:'/Home', hash: '#hero'}}><li><a className="smoothscroll">Home.</a></li></Link>
+                            <li><a className="smoothscroll" href="#about">About.</a></li>
+                            <li><a className="smoothscroll" href="#testimonial-scroll">Testimonials.</a></li>
+                            <li><a className="smoothscroll" href="#portfolio">Blog.</a></li>
+                            <li><a className="smoothscroll" href="#contact">Contact.</a></li>
                         </ul>
                     </nav>
 

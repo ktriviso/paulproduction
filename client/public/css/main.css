@@ -1486,6 +1486,7 @@ a:visited {
 	font: 14px/21px "raleway-bold", sans-serif;
 	letter-spacing: 2px;
 	color: white;
+	background-color: black;
 	margin: 0;
 }
 
@@ -1495,6 +1496,9 @@ a:visited {
 	margin: 0;
 }
 
+.folio-item .portfolio-item-meta i {
+	color: white;
+}
 /* on hover */
 .folio-item:hover .overlay,
 .folio-item:hover .link-icon,
@@ -2525,6 +2529,17 @@ input[type="email"],
 /**
 /* 13. =footer
 /* =================================================================== */
+#temp-footer {
+	width: 100%;
+	background-color: black;
+	text-align: center;
+	padding: 1rem;
+}
+
+#temp-footer span {
+	color: white;
+}
+
 
 footer {
 	padding-top: 60px;
@@ -2535,10 +2550,6 @@ footer {
 	background-color: black;
     bottom: 0;
     width: 100%
-}
-
-footer .content {
-	margin-bottom: 12px;
 }
 
 footer a,
@@ -2585,7 +2596,6 @@ footer .footer-logo {
 footer .copyright {
 	clear: both;
 	margin: 15px 0;
-	padding: 24px 18px 6px 18px;
 	font: 14px/24px "raleway-medium", sans-serif;
 	letter-spacing: .5px;
 	text-align: center;
@@ -2598,9 +2608,9 @@ footer .copyright li {
 
 /* social links */
 footer .social-links {
-	margin: 30px auto 42px auto;
+	margin: 20px auto;
 	padding: 0;
-	font-size: 38px;
+	font-size: 30px;
 	text-align: center;
 }
 
@@ -2612,11 +2622,12 @@ footer .social-links li {
 }
 
 footer .social-links li a {
-	color: rgba(255, 255, 255, 0.1);
+	/*color: rgba(255, 255, 255, 0.1);*/
+	color: white;
 }
 
 footer .social-links li a:hover {
-	color: white;
+	color: #E89B0D;
 }
 
 footer .social-links li:first-child {
@@ -2627,7 +2638,7 @@ footer .social-links li:first-child {
 
 @media only screen and (max-width:600px) {
 	footer .social-links {
-		font-size: 32px;
+		font-size: 27px;
 	}
 
 	footer .social-links li {
@@ -2649,7 +2660,7 @@ footer .social-links li:first-child {
 
 @media only screen and (max-width:400px) {
 	footer .social-links {
-		font-size: 25px;
+		font-size: 20px;
 	}
 
 	footer .social-links li {
@@ -2660,7 +2671,7 @@ footer .social-links li:first-child {
 
 @media only screen and (max-width:350px) {
 	footer .social-links {
-		font-size: 22px;
+		font-size: 18px;
 	}
 
 	footer .social-links li {

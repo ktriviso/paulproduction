@@ -36,6 +36,7 @@ export default class Modal extends Component {
 
     render() {
         return (
+
             <div id="modal-bg">
                 <div id="modal-01" className="popup-modal">
                     <div className="media">
@@ -45,10 +46,12 @@ export default class Modal extends Component {
                     <div className="description-box">
                         <h2>{this.state.blogTitle}</h2>
                         <ReactMarkdown source={this.state.blogContent} />
-                        <span className="categories">{this.state.blogCategory}</span>
+
                     </div>
 
                 </div>
+
+                <div id="temp-footer">Powered by <span>PR Programming</span></div>
             </div>
         )
     }
