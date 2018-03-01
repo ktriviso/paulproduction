@@ -9,6 +9,15 @@ export default class Header extends Component {
         }
     }
 
+    sendHashScroll(e){
+        console.log(e.target)
+        const hash = e.target.getAttribute('href').replace('/#', '')
+        const target = document.getElementById(hash)
+        if(target) {
+            target.scrollIntoView()
+        }
+    }
+
     render(){
         return(
             <header id="main-header">
@@ -16,11 +25,11 @@ export default class Header extends Component {
 
                     <nav id="nav-wrap">
                         <ul id="nav" className="nav">
-                            <Link to={{pathname:'/Home', hash: '#hero'}}><li><a className="smoothscroll">Home.</a></li></Link>
-                            <li><a className="smoothscroll" href="#about">About.</a></li>
-                            <li><a className="smoothscroll" href="#testimonial-scroll">Testimonials.</a></li>
-                            <li><a className="smoothscroll" href="#portfolio">Blog.</a></li>
-                            <li><a className="smoothscroll" href="#contact">Contact.</a></li>
+                            <li><Link to={{pathname: '/', hash: '#hero'}} onClick={this.sendHashScroll.bind(this)}>Home.</Link></li>
+                            <li><Link to={{pathname: '/', hash: '#about'}} onClick={this.sendHashScroll.bind(this)}>About.</Link></li>
+                            <li><Link to={{pathname: '/', hash: '#testimonial-scroll'}} onClick={this.sendHashScroll.bind(this)}>Testimonials.</Link></li>
+                            <li><Link to={{pathname: '/', hash: '#portfolio'}} onClick={this.sendHashScroll.bind(this)}>Blog.</Link></li>
+                            <li><Link to={{pathname: '/', hash: '#contact'}} onClick={this.sendHashScroll.bind(this)}>Contact.</Link></li>
                         </ul>
                     </nav>
 
