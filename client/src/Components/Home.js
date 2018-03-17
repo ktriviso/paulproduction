@@ -249,7 +249,7 @@ export default class Home extends Component {
                             <hr />
                             </div>
                             <ul className="copyright">
-                                <li><img src="lg-logo.jpg"/></li>
+                                <li><img src="/lg-logo.jpg"/></li>
                                 <li>&copy; Copyright 2015 PR-Programming.</li>
                                 <br/>
                                 <li>Design by <a href="#">Styleshout.</a>.</li>
