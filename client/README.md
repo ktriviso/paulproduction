@@ -1,4 +1,13 @@
-
+<!-- <a href="https://www.kristatriviso.com" target="_blank">
+    <div className="logo">
+        <div className="icon animate">
+            <span>K</span>
+            <span>T</span>
+        </div>
+        <div className="pipe animate">|</div>
+        <div className="name animate">Krista Triviso</div>
+    </div>
+</a> -->
     handleCloseModal(e){
         e.preventDefault()
         this.props.handleCloseModal()

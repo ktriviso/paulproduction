@@ -249,18 +249,11 @@ export default class Home extends Component {
                             <hr />
                             </div>
                             <ul className="copyright">
-                            <a href="https://www.kristatriviso.com" target="_blank">
-                                <div className="logo">
-                                    <div className="icon animate">
-                                        <span>K</span>
-                                        <span>T</span>
-                                    </div>
-                                    <div className="pipe animate">|</div>
-                                    <div className="name animate">Krista Triviso</div>
-                                </div>
-                            </a>
+                                <li><img src="lg-logo.jpg"/></li>
                                 <li>&copy; Copyright 2015 PR-Programming.</li>
+                                <br/>
                                 <li>Design by <a href="#">Styleshout.</a>.</li>
+                                <li>Site built by <a href='http://kristatriviso.com/'>Krista Triviso</a></li>
                             </ul>
                             <div id="go-top">
                                 <a className="smoothscroll" title="Back to Top" href="#hero">Back to Top<i className="fa fa-angle-up"></i></a>
