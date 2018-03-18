@@ -51,11 +51,7 @@ export default class Home extends Component {
         e.preventDefault()
         const _this = this
         axios.post('https://ktnodemailer.herokuapp.com/sendEmail', {
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json'
-            },
-            data: _this.state
+            data: {..._this.state}
         }).then(function(response){
             console.log(response)
             if(response.status === 200){
