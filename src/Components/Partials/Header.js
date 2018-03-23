@@ -22,7 +22,7 @@ export default class Header extends Component {
         return(
             <header id="main-header">
                 <div className="row">
-                <img src="/sm-logo.jpg"/>
+                <img src="/LogoNoBackground.png"/>
 
                     <nav id="nav-wrap">
                         <ul id="nav" className="nav">
