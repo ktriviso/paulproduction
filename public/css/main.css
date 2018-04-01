@@ -2682,6 +2682,7 @@ footer .copyright img {
 footer .copyright li {
 	/* display: inline-block; */
 	padding: 0 5px;
+	list-style: none;
 }
 
 /* social links */
