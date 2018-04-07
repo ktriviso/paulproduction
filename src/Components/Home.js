@@ -224,13 +224,13 @@ export default class Home extends Component {
                     <div className="six columns tab-whole right">
                         <h3>Contact Information:</h3>
                         <p>Number: (570) 590 8251<br/>
-                        Email: info.prprogramming@gmail.com <br/>
+                        Email: info@pr-programming.com <br/>
                         </p>
 
                         <h3 className="address">Affiliated Gyms</h3>
                         <p>
                         CrossFit Outbreak<br/>
-                        Clinton Hill <span className="contact-span">|</span> E. Williamsburg <span className="contact-span">|</span> Williamsburg <span className="contact-span">|</span> Bed Stuy<br/>
+                        Clinton Hill <span className="contact-span">|</span> E. Williamsburg <span className="contact-span">|</span> Williamsburg <span className="contact-span">|</span> Bed Stuy <span className="contact-span">|</span> Bushwick<br/>
                         New York<br/>
                         </p>
 
