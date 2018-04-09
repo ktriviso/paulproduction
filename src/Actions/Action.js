@@ -10,7 +10,6 @@ export const getAppStore = (callback) => {
     })
 
     cms.getEntries().then((response) => {
-        console.log(response)
         const responseItems = response.items
         const aboutGrid = _.filter(responseItems, (item) => {
             return item.sys.contentType.sys.id === 'aboutGrid'

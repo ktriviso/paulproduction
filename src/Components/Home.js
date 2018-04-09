@@ -66,10 +66,8 @@ export default class Home extends Component {
 
     }
     componentDidMount(){
-        console.log(this.props.history.location.hash)
         let {hash} = this.props.history.location
         hash = hash.replace('#', '')
-        console.log(document.getElementById(hash))
         if(hash && hash.length > 0){
             document.getElementById(hash).scrollIntoView()
         }
