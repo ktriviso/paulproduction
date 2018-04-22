@@ -20,10 +20,9 @@ export default class Home extends Component {
             launchModal: false,
             activeBlogPost: {},
             emailWasSent: false,
-            name: '',
-            email: '',
-            number: '',
-            message: ''
+            name: "",
+            email: "",
+            message: ""
         }
     }
 
@@ -39,32 +38,22 @@ export default class Home extends Component {
             })
 
     }
-    handleNameInput(e){
-        e.preventDefault()
-        this.setState({name: e.target.value})
+    handleChange = e => this.setState({
+        [e.target.name]: e.target.value
+    })
     }
-    handleEmailInput(e){
-        e.preventDefault()
-        this.setState({email: e.target.value})
-    }
-    handleNumberInput(e){
-        e.preventDefault()
-        this.setState({number: e.target.value})
-    }
-    handleMessageInput(e){
-        e.preventDefault()
-        this.setState({message: e.target.value})
-    }
-    // handleSubmit(e){
-    //     fetch("/", {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //         body: encode({ "form-name": "contact", ...this.state })
-    //     })
-    //     .then(() => alert("Success!"))
-    //     .catch(error => alert(error));
-    // e.preventDefault();
-    // }
+    handleSubmit = e => {
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...this.state })
+          })
+            .then(() => alert("Success!"))
+            .catch(error => alert(error));
+
+          e.preventDefault();
+    };
+    handleChange = e => this.setState({ [e.target.name]: e.target.value });
     componentDidMount(){
         let {hash} = this.props.history.location
         hash = hash.replace('#', '')
@@ -92,6 +81,8 @@ export default class Home extends Component {
         const hero_style = {
             background: `url(${image_bg})`
         }
+
+        const { name, email, message } = this.state;
 
         return(
             <div>
@@ -197,15 +188,15 @@ export default class Home extends Component {
                     <div className="row">
                         <div id="contact-form" className="six columns tab-whole left">
 
-                        <form method="POST" name="contact" id="contactForm" netlify >
+                        <form method="POST" name="contact" id="contactForm" netlify onSubmit={this.handleSubmit}>
 
                             <input type="hidden" name="pr-form" value="pr-form" />
 
-                            <input name="name" type="text" id="contactName" value={this.state.name} onChange={this.handleNameInput.bind(this) placeholder="Name" />
+                            <input name="name" type="text" id="contactName" placeholder="Name" onChange={this.handleChange}/>
 
-                            <input name="email" type="email" id="contactEmail" value={this.state.email} onChange={this.handleNameInput.bind(this) placeholder="Email" />
+                            <input name="email" type="email" id="contactEmail" placeholder="Email" onChange={this.handleChange}/>
 
-                            <textarea name="message"  id="contactMessage" value={this.state.message} onChange={this.handleNameInput.bind(this) placeholder="Message"></textarea>
+                            <textarea name="message"  id="contactMessage" placeholder="Message" onChange={this.handleChange}></textarea>
 
                             <button type="submit" className="submitform">Send</button>
 
