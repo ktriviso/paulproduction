@@ -46,13 +46,13 @@ export default class Home extends Component {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", ...this.state })
           })
-            .then(() => alert("Success!"))
+            .then(() => this.setState({emailWasSent: true}))
             .catch(error => alert(error));
 
           e.preventDefault();
     };
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
-    
+
     componentDidMount(){
         let {hash} = this.props.history.location
         hash = hash.replace('#', '')
