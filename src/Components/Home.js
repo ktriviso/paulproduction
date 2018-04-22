@@ -32,16 +32,14 @@ export default class Home extends Component {
             activeBlogPost: blogPost
             })
     }
+
     closeModal(){
         this.setState({
             launchModal: false
             })
 
     }
-    handleChange = e => this.setState({
-        [e.target.name]: e.target.value
-    })
-    }
+
     handleSubmit = e => {
           fetch("/", {
             method: "POST",
@@ -54,6 +52,7 @@ export default class Home extends Component {
           e.preventDefault();
     };
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
+    
     componentDidMount(){
         let {hash} = this.props.history.location
         hash = hash.replace('#', '')
@@ -188,9 +187,7 @@ export default class Home extends Component {
                     <div className="row">
                         <div id="contact-form" className="six columns tab-whole left">
 
-                        <form method="POST" name="contact" id="contactForm" netlify onSubmit={this.handleSubmit}>
-
-                            <input type="hidden" name="pr-form" value="pr-form" />
+                        <form onSubmit={this.handleSubmit} id="contactForm">
 
                             <input name="name" type="text" id="contactName" placeholder="Name" onChange={this.handleChange}/>
 
