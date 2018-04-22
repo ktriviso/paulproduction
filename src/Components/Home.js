@@ -5,7 +5,14 @@ import Testimonial from './Partials/Testimonial'
 import axios from 'axios'
 import EmailStatus from './EmailStatus'
 
+var encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+}
+
 export default class Home extends Component {
+
     constructor(props){
         super(props)
 
@@ -19,6 +26,7 @@ export default class Home extends Component {
             message: ''
         }
     }
+
     launchModal(blogPost) {
         this.setState({
             launchModal: true,
@@ -48,22 +56,14 @@ export default class Home extends Component {
         this.setState({message: e.target.value})
     }
     handleSubmit(e){
-        e.preventDefault()
-        const _this = this
-        axios.post('https://ktnodemailer.herokuapp.com/sendEmail', {
-            data: {..._this.state}
-        }).then(function(response){
-            console.log(response)
-            if(response.status === 200){
-                console.log(response.status)
-                _this.setState({
-                    emailWasSent: true
-                })
-            }
-        }).catch(function(error){
-            console.log(error)
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...this.state })
         })
-
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+    e.preventDefault();
     }
     componentDidMount(){
         let {hash} = this.props.history.location
@@ -196,26 +196,19 @@ export default class Home extends Component {
 
                     <div className="row">
                         <div id="contact-form" className="six columns tab-whole left">
-                            <form name="contactForm" id="contactForm" onSubmit={this.handleSubmit.bind(this)} >
-                            <fieldset>
-                                <div className="group">
-                                    <input name="contactName" type="text" id="contactName" placeholder="Name" value={this.state.name} onChange={this.handleNameInput.bind(this)} minLength="2" required />
-                                </div>
-                                <div>
-                                    <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value={this.state.email} onChange={this.handleEmailInput.bind(this)} required />
-                                </div>
-                                <div>
-                                    <input name="contactSubject" type="text" id="contactSubject" placeholder="Number"  value={this.state.number} onChange={this.handleNumberInput.bind(this)}/>
-                                </div>
-                                <div>
-                                    <textarea name="contactMessage"  id="contactMessage" placeholder="Message" value={this.state.message} onChange={this.handleMessageInput.bind(this)} rows="10" cols="50" required ></textarea>
-                                </div>
-                                <div>
-                                    <button className="submitform">Submit</button>
-                                </div>
 
+                        <form method="POST" name="contact" id="contactForm" netlify >
 
-                            </fieldset>
+                            <input type="hidden" name="pr-form" value="pr-form" />
+
+                            <input name="name" type="text" id="contactName" value = "name" placeholder="Name" />
+
+                            <input name="email" type="email" id="contactEmail" value = "email" placeholder="Email" />
+
+                            <textarea name="message"  id="contactMessage" value = "message" placeholder="Message"></textarea>
+
+                            <button type="submit" className="submitform">Send</button>
+
                         </form>
                     </div>
 
@@ -265,3 +258,20 @@ export default class Home extends Component {
     }
 
 }
+
+//
+// <form method="POST" name="contact" id="contactForm" onSubmit={this.handleSubmit.bind(this)} netlify >
+//
+//     <input type="hidden" name="form-name" value="contact" />
+//
+//     <input name="name" type="text" id="contactName" placeholder="Name" value={this.state.name} onChange={this.handleNameInput.bind(this)}/>
+//
+//     <input name="email" type="email" id="contactEmail" placeholder="Email" value={this.state.email} onChange={this.handleEmailInput.bind(this)}/>
+//
+//     <textarea name="message"  id="contactMessage" placeholder="Message" value={this.state.message} onChange={this.handleMessageInput.bind(this)}></textarea>
+//
+//     <div data-netlify-recaptcha></div>
+//
+//     <button type="submit" className="submitform">Send</button>
+//
+// </form>
