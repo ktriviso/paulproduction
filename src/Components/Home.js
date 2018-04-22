@@ -39,32 +39,32 @@ export default class Home extends Component {
             })
 
     }
-    handleNameInput(e){
-        e.preventDefault()
-        this.setState({name: e.target.value})
-    }
-    handleEmailInput(e){
-        e.preventDefault()
-        this.setState({email: e.target.value})
-    }
-    handleNumberInput(e){
-        e.preventDefault()
-        this.setState({number: e.target.value})
-    }
-    handleMessageInput(e){
-        e.preventDefault()
-        this.setState({message: e.target.value})
-    }
-    handleSubmit(e){
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...this.state })
-        })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
-    e.preventDefault();
-    }
+    // handleNameInput(e){
+    //     e.preventDefault()
+    //     this.setState({name: e.target.value})
+    // }
+    // handleEmailInput(e){
+    //     e.preventDefault()
+    //     this.setState({email: e.target.value})
+    // }
+    // handleNumberInput(e){
+    //     e.preventDefault()
+    //     this.setState({number: e.target.value})
+    // }
+    // handleMessageInput(e){
+    //     e.preventDefault()
+    //     this.setState({message: e.target.value})
+    // }
+    // handleSubmit(e){
+    //     fetch("/", {
+    //         method: "POST",
+    //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //         body: encode({ "form-name": "contact", ...this.state })
+    //     })
+    //     .then(() => alert("Success!"))
+    //     .catch(error => alert(error));
+    // e.preventDefault();
+    // }
     componentDidMount(){
         let {hash} = this.props.history.location
         hash = hash.replace('#', '')
