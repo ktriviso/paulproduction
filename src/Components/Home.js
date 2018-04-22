@@ -39,22 +39,22 @@ export default class Home extends Component {
             })
 
     }
-    // handleNameInput(e){
-    //     e.preventDefault()
-    //     this.setState({name: e.target.value})
-    // }
-    // handleEmailInput(e){
-    //     e.preventDefault()
-    //     this.setState({email: e.target.value})
-    // }
-    // handleNumberInput(e){
-    //     e.preventDefault()
-    //     this.setState({number: e.target.value})
-    // }
-    // handleMessageInput(e){
-    //     e.preventDefault()
-    //     this.setState({message: e.target.value})
-    // }
+    handleNameInput(e){
+        e.preventDefault()
+        this.setState({name: e.target.value})
+    }
+    handleEmailInput(e){
+        e.preventDefault()
+        this.setState({email: e.target.value})
+    }
+    handleNumberInput(e){
+        e.preventDefault()
+        this.setState({number: e.target.value})
+    }
+    handleMessageInput(e){
+        e.preventDefault()
+        this.setState({message: e.target.value})
+    }
     // handleSubmit(e){
     //     fetch("/", {
     //         method: "POST",
@@ -201,11 +201,11 @@ export default class Home extends Component {
 
                             <input type="hidden" name="pr-form" value="pr-form" />
 
-                            <input name="name" type="text" id="contactName" value = "name" placeholder="Name" />
+                            <input name="name" type="text" id="contactName" value={this.state.name} onChange={this.handleNameInput.bind(this) placeholder="Name" />
 
-                            <input name="email" type="email" id="contactEmail" value = "email" placeholder="Email" />
+                            <input name="email" type="email" id="contactEmail" value={this.state.email} onChange={this.handleNameInput.bind(this) placeholder="Email" />
 
-                            <textarea name="message"  id="contactMessage" value = "message" placeholder="Message"></textarea>
+                            <textarea name="message"  id="contactMessage" value={this.state.message} onChange={this.handleNameInput.bind(this) placeholder="Message"></textarea>
 
                             <button type="submit" className="submitform">Send</button>
 
