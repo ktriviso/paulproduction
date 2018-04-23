@@ -35,7 +35,7 @@ export default class Header extends Component {
                     </nav>
 
                     <ul className="header-social">
-                        <li><a href="https://www.facebook.com/paul.roller.5" target="_blank"><i className="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.facebook.com/PR-Programming-and-Nutrition-1181868045249132/?ref=bookmarks" target="_blank"><i className="fa fa-facebook"></i></a></li>
                         <li><a href="https://www.youtube.com/channel/UCpsHvOv3nK96N-hh4TxZ0mg" target="_blank"><i className="fa fa-youtube-play"></i></a></li>
                         <li><a href="https://www.instagram.com/pr_programming/" target="_blank"><i className="fa fa-instagram"></i></a></li>
                     </ul>
