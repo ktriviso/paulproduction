@@ -592,6 +592,12 @@ img {
 
 }
 
+
+@media screen and (max-width:768px) {
+	#main-header img {
+		display: none;
+	}
+}
 /* large mobile devices
 --------------------------------------------------------------- */
 @media screen and (max-width:600px) {
