@@ -22,9 +22,9 @@ export default class Testimonials extends Component {
         return (
             <div className="row">
                 <div id="team-wrapper" className="bgrid-fourth s-bgrid-third tab-bgrid-half mob-bgrid-whole group">
-                {testimonials.map(function(testimonial){
+                {testimonials.map(function(testimonial, i){
                     return (
-                        <div className="bgrid member">
+                        <div className="bgrid member" key={i}>
                             <div className="member-pic">
                                 <img src={testimonial.fields.testimonialProfile.fields.file.url} alt=""/>
                                 <div className="mask"></div>

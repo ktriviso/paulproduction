@@ -9,6 +9,17 @@ export const getAppStore = (callback) => {
         accessToken: CONFIG.access_token
     })
 
+    // this sorts the blog posts by its createdAt timestamp from contentful
+    cms.getEntries({content_type:'blogPosts', 'order':'-sys.createdAt'}).then((response) => {
+        const responseItems = response.items
+        AppStore.data.blogPosts = responseItems
+        AppStore.emitChange()
+
+        if(callback){
+            callback(false, AppStore)
+        }
+    })
+
     cms.getEntries().then((response) => {
         const responseItems = response.items
         const aboutGrid = _.filter(responseItems, (item) => {
@@ -17,19 +28,14 @@ export const getAppStore = (callback) => {
         const testimonials = _.filter(responseItems, (item) => {
             return item.sys.contentType.sys.id === 'testimonials'
         })
-        const blogPosts = _.filter(responseItems, (item) => {
-            return item.sys.contentType.sys.id === 'blogPosts'
-        })
         const siteHeader = _.find(responseItems, (item) => {
             return item.sys.contentType.sys.id === 'siteHeader'
         })
 
         AppStore.data.aboutGrid = aboutGrid
         AppStore.data.testimonials = testimonials
-        AppStore.data.blogPosts = blogPosts
         AppStore.data.siteHeader = siteHeader
         AppStore.data.ready = true
-
         AppStore.emitChange()
 
         if(callback){

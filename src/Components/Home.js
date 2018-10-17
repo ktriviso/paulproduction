@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Modal from './Modal'
 import Testimonial from './Partials/Testimonial'
-import axios from 'axios'
 import EmailStatus from './EmailStatus'
 
 var encode = (data) => {
@@ -74,14 +73,11 @@ export default class Home extends Component {
         var testimonials = this.props.data.testimonials
         var blogPosts = this.props.data.blogPosts
         var siteHeader = this.props.data.siteHeader
-        var _this = this
 
         const image_bg = siteHeader.fields.headerImage.fields.file.url
         const hero_style = {
             background: `url(${image_bg})`
         }
-
-        const { name, email, message } = this.state;
 
         return(
             <div>
@@ -95,15 +91,17 @@ export default class Home extends Component {
                             <div className="slides">
                                 <div className="flex-caption">
                                     <h1 className="">{siteHeader.fields.headerTitle}</h1>
-                                    <h2>Powered by Crossfit Outbreak</h2>
-                                    <h3 className="">{siteHeader.fields.headerContent}</h3>
+                                    <h2 id="header-content">{siteHeader.fields.headerContent}</h2>
+                                    {/* <h2>Powered by Crossfit Outbreak</h2>   */}
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                     <div id="more">
                         <a className="smoothscroll" href="#services">More About Us<i></i></a>
                     </div>
+                    <h3>Powered by Crossfit Outbreak</h3>
                 </section>
 
                 <section id="about">
@@ -112,7 +110,7 @@ export default class Home extends Component {
                             <h1>About Our Head Coach Paul Roller<span>.</span></h1>
                             <hr />
                             <div className='container'>
-                                <img className='bio-picture' src='./Headshot.jpg'/>
+                                <img className='bio-picture' src='./Headshot.jpg' alt="bio picture"/>
                                 <p>Paul has an obsessive passion for learning the latest techniques in strength and conditioning, and using them to help others achieve their goals. Paul bases his knowledge on scientifically researched and well-tested protocols. He currently spends his time coaching at CrossFit Outbreak in Brooklyn, New York, coaching classes and designing training programs for general clients and competitive athletes alike. </p>
                             </div>
                         </div>
@@ -120,9 +118,9 @@ export default class Home extends Component {
 
                     <div className="row mobile-no-padding">
                         <div id="about-container"className="process bgrid-half tab-bgrid-whole group">
-                            {aboutGrid.map(function(about){
+                            {aboutGrid.map(function(about, i){
                                 return (
-                                    <div className="bgrid">
+                                    <div className="bgrid" key={i}>
                                         <h3>{about.fields.aboutTitle}</h3>
                                         <p>{about.fields.aboutContent}</p>
                                     </div>
@@ -154,24 +152,20 @@ export default class Home extends Component {
 
                     <div className="row items mobile-no-padding">
                         <div id="portfolio-wrapper" className="bgrid-fourth s-bgrid-third tab-bgrid-half">
-                                    {blogPosts.map(function(blogPost){
-
-                                        return (
-                                            <div className="bgrid folio-item">
-                                                <div className="item-wrap">
-                                                <Link to={'/blog/' + blogPost.sys.id}><img src={blogPost.fields.blogImage.fields.file.url}/></Link>
-
-
-                                                    <div className="portfolio-item-meta">
-                                                        <h5>{blogPost.fields.blogTitle}</h5>
-                                                        <p>{blogPost.fields.blogCategory}</p>
-                                                        <i className="fa fa-plus"></i>
-                                                    </div>
-                                                </div>
+                            {blogPosts.map(function(blogPost, i){
+                                return (
+                                    <div className="bgrid folio-item" key={i}>
+                                        <div className="item-wrap">
+                                        <Link to={'/blog/' + blogPost.sys.id}><img src={blogPost.fields.blogImage.fields.file.url} alt="blog post"/></Link>
+                                            <div className="portfolio-item-meta">
+                                                <h5>{blogPost.fields.blogTitle}</h5>
+                                                <p>{blogPost.fields.blogCategory}</p>
+                                                <i className="fa fa-plus"></i>
                                             </div>
-                                        )
-                                    })}
-
+                                        </div>
+                                    </div>
+                                )
+                            })}
                         </div>
                     </div>
                 </section>
@@ -228,7 +222,7 @@ export default class Home extends Component {
                             <hr />
                             </div>
                             <ul className="copyright">
-                                <li><img src="/LogoNoBackground.png"/></li>
+                                <li><img src="/LogoNoBackground.png" alt="copyright"/></li>
                                 <li>&copy; Copyright 2015 PR-Programming.</li>
                                 <br/>
                                 <li>Design by <a href="#">Styleshout.</a>.</li>
