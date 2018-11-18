@@ -95,17 +95,13 @@ h6 {
 
 p {
 	margin: 15px 0 15px 0;
+	overflow: hidden;
+	height: min-content;
 }
 
 @media only screen and (max-width:400px) {
 	p {
 		font-size: 12px!important;
-	}
-	/*h3 {
-		font-size: 14px!important;
-	}
-	h1 {
-		font-size: 14px!important;*/
 	}
 	button {
 		font-size: 12px!important;
@@ -1933,8 +1929,6 @@ a:visited {
 #team-wrapper .member {
 	margin-bottom: 24px;
 	margin-top: 12px;
-	max-height: 700px;
-	overflow: scroll;
 }
 
 
@@ -3014,3 +3008,5 @@ footer .social-links li:first-child {
     display: none;
   }
 }
+
+button:focus {outline:0;}

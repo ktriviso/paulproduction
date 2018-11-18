@@ -136,7 +136,7 @@ export default class Home extends Component {
                             <hr />
                             <div className='container'>
                                 
-                                <p>Designed to increase your ability to squat and press, whether it be for wall balls, thrusters, goblet squats, push press and many other movements</p>
+                                <p>Our programs are created to maximize your potential in whatever facet you chose. Whether it’s individualized programming, nutrition, or a specific accessory program, this is your home base to get you one step closer to greatness!</p>
                                 
                             </div>
                         </div>
