@@ -25,6 +25,9 @@ export const getAppStore = (callback) => {
         const aboutGrid = _.filter(responseItems, (item) => {
             return item.sys.contentType.sys.id === 'aboutGrid'
         })
+        const programs = _.filter(responseItems, (item) => {
+            return item.sys.contentType.sys.id === 'programs'
+        })
         const testimonials = _.filter(responseItems, (item) => {
             return item.sys.contentType.sys.id === 'testimonials'
         })
@@ -33,6 +36,7 @@ export const getAppStore = (callback) => {
         })
 
         AppStore.data.aboutGrid = aboutGrid
+        AppStore.data.programs = programs
         AppStore.data.testimonials = testimonials
         AppStore.data.siteHeader = siteHeader
         AppStore.data.ready = true

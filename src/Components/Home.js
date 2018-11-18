@@ -70,6 +70,7 @@ export default class Home extends Component {
             modal = <Modal handleCloseModal={this.closeModal.bind(this)} blogPost={this.state.activeBlogPost}/>
         }
         var aboutGrid = this.props.data.aboutGrid
+        var programs = this.props.data.programs
         var testimonials = this.props.data.testimonials
         var blogPosts = this.props.data.blogPosts
         var siteHeader = this.props.data.siteHeader
@@ -123,6 +124,32 @@ export default class Home extends Component {
                                     <div className="bgrid" key={i}>
                                         <h3>{about.fields.aboutTitle}</h3>
                                         <p>{about.fields.aboutContent}</p>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+
+                    <div className="row section-head">
+                        <div className="twelve columns">
+                            <h1>Programs<span>.</span></h1>
+                            <hr />
+                            <div className='container'>
+                                
+                                <p>Designed to increase your ability to squat and press, whether it be for wall balls, thrusters, goblet squats, push press and many other movements</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row mobile-no-padding">
+                        <div id="about-container"className="process bgrid-half tab-bgrid-whole group">
+                            {programs.map(function(program, i){
+                                return (
+                                    <div className="bgrid" key={i}>
+                                        <h3>{program.fields.programTitle}</h3>
+                                        <p>{program.fields.programDescription}</p>
+                                        <p>Book your class <a href={program.fields.programLink} target="_blank">here</a>.</p>
                                     </div>
                                 )
                             })}
