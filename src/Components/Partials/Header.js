@@ -22,7 +22,7 @@ export default class Header extends Component {
         return(
             <header id="main-header">
                 <div className="row">
-                <img src="/LogoNoBackground.png"/>
+                <img src="/LogoNoBackground.png" alt="Logo"/>
 
                     <nav id="nav-wrap">
                         <ul id="nav" className="nav">
@@ -35,9 +35,9 @@ export default class Header extends Component {
                     </nav>
 
                     <ul className="header-social">
-                        <li><a href="https://www.facebook.com/PR-Programming-and-Nutrition-1181868045249132/?ref=bookmarks" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCpsHvOv3nK96N-hh4TxZ0mg" target="_blank"><i className="fa fa-youtube-play"></i></a></li>
-                        <li><a href="https://www.instagram.com/pr_programming/" target="_blank"><i className="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/PR-Programming-and-Nutrition-1181868045249132/?ref=bookmarks" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCpsHvOv3nK96N-hh4TxZ0mg" target="_blank" rel="noopener noreferrer"><i className="fa fa-youtube-play"></i></a></li>
+                        <li><a href="https://www.instagram.com/pr_programming/" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </header>

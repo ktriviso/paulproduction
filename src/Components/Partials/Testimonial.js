@@ -2,10 +2,6 @@ import React, {Component} from 'react'
 import InnerTestimonial from './InnerTestimonial'
 
 export default class Testimonials extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     componentDidMount(){
         let {testimonials} = this.props
         if(testimonials.length > 0){

@@ -111,7 +111,7 @@ export default class Home extends Component {
                             <h1>About Our Head Coach Paul Roller<span>.</span></h1>
                             <hr />
                             <div className='container'>
-                                <img className='bio-picture' src='./Headshot.jpg' alt="bio picture"/>
+                                <img className='bio-picture' src='./Headshot.jpg' alt="bio"/>
                                 <p>Paul has an obsessive passion for learning the latest techniques in strength and conditioning, and using them to help others achieve their goals. Paul bases his knowledge on scientifically researched and well-tested protocols. He currently spends his time coaching at CrossFit Outbreak in Brooklyn, New York, coaching classes and designing training programs for general clients and competitive athletes alike. </p>
                             </div>
                         </div>
@@ -242,9 +242,9 @@ export default class Home extends Component {
                     <div className="row">
                         <div className="twelve columns content group">
                             <ul className="social-links">
-                                <li><a href="https://www.facebook.com/paul.roller.5" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCpsHvOv3nK96N-hh4TxZ0mg" target="_blank"><i className="fa fa-youtube-play"></i></a></li>
-                                <li><a href="https://www.instagram.com/pr_programming/" target="_blank"><i className="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/paul.roller.5" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCpsHvOv3nK96N-hh4TxZ0mg" target="_blank" rel="noopener noreferrer"><i className="fa fa-youtube-play"></i></a></li>
+                                <li><a href="https://www.instagram.com/pr_programming/" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram"></i></a></li>
                             </ul>
                             <hr />
                             </div>
@@ -252,7 +252,7 @@ export default class Home extends Component {
                                 <li><img src="/LogoNoBackground.png" alt="copyright"/></li>
                                 <li>&copy; Copyright 2015 PR-Programming.</li>
                                 <br/>
-                                <li>Design by <a href="#">Styleshout.</a>.</li>
+                                <li>Design by <a href="/">Styleshout.</a>.</li>
                                 <li>Site built by <a href='http://kristatriviso.com/'>Krista Triviso</a></li>
                             </ul>
                             <div id="go-top">

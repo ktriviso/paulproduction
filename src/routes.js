@@ -19,9 +19,9 @@ const routes_with_components = [
 
 export default (
     <Switch>
-     {routes_with_components.map((route) => (
+     {routes_with_components.map((route, i) => (
          // render cuts down on load time
-         <Route exact={route.exact} path={route.path} render={(props) => {
+         <Route key={i} exact={route.exact} path={route.path} render={(props) => {
             return <route.component data={AppStore.data} {...props}/>
          }}/>
         )

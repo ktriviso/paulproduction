@@ -31,7 +31,7 @@ export default class Modal extends Component {
             <div id="modal-bg">
                 <div id="modal-01" className="popup-modal">
                     <div className="media">
-                        <img src={this.state.blogImage}/>
+                        <img src={this.state.blogImage} alt="Blog Post"/>
                     </div>
                     <div className="description-box">
                         <h2>{this.state.blogTitle}</h2>
