@@ -149,7 +149,7 @@ export default class Home extends Component {
                                     <div className="bgrid" key={i}>
                                         <h3>{program.fields.programTitle}</h3>
                                         <p>{program.fields.programDescription}</p>
-                                        <p>Book your class <a href={program.fields.programLink} target="_blank">here</a>.</p>
+                                        <p>Purchase <a href={program.fields.programLink} target="_blank">here</a>.</p>
                                     </div>
                                 )
                             })}
