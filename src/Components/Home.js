@@ -208,7 +208,7 @@ export default class Home extends Component {
                     <div className="row">
                         <div id="contact-form" className="six columns tab-whole left">
 
-                        <form onSubmit={this.handleSubmit} id="contactForm">
+                        <form onSubmit={this.handleSubmit} id="contactForm" data-netlify-recaptcha="true">
 
                             <input name="name" type="text" id="contactName" placeholder="Name" onChange={this.handleChange}/>
 
