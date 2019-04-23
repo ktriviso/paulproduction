@@ -215,6 +215,8 @@ export default class Home extends Component {
                             <input name="email" type="email" id="contactEmail" placeholder="Email" onChange={this.handleChange}/>
 
                             <textarea name="message"  id="contactMessage" placeholder="Message" onChange={this.handleChange}></textarea>
+                            
+                            <div data-netlify-recaptcha="true"></div>
 
                             <button type="submit" className="submitform">Send</button>
 
